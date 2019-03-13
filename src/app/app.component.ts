@@ -29,6 +29,11 @@ export class AppComponent {
       title: 'Notifiche',
       url: '/notifiche',
       icon: 'notifications'
+    },
+    {
+      title: 'Elenco Esercenti',
+      url: '/elencoesercenti',
+      icon: 'wine'
     }
   ];
 

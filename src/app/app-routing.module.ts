@@ -22,6 +22,10 @@ const routes: Routes = [
   { 
     path: 'notifiche', 
     loadChildren: './notifiche/notifiche.module#NotifichePageModule' 
+  },
+  { 
+    path: 'elencoesercenti', 
+    loadChildren: './elencoesercenti/elencoesercenti.module#ElencoesercentiPageModule' 
   }
 ];
 
