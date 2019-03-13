@@ -9,8 +9,23 @@ import { MieibuoniPage } from './mieibuoni.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'mieibuoni',
     component: MieibuoniPage,
+    children: [
+      {
+        path: 'dariscattare',
+        loadChildren: './mieibuoni/tabs/dariscattare/dariscattare.module#DariscattarePageModule'
+      },
+      {
+        path: 'utilizzati',
+        loadChildren: './mieibuoni/tabs/utilizzati/utilizzati.module#UtilizzatiPageModule'
+      }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: 'mieibuoni/dariscattare',
+    pathMatch: 'full'
   }
 ];
 

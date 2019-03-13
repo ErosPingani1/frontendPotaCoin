@@ -38,6 +38,14 @@ const routes: Routes = [
   { 
     path: 'help', 
     loadChildren: './help/help.module#HelpPageModule' 
+  },
+  { 
+    path: 'dariscattare', 
+    loadChildren: './mieibuoni/tabs/dariscattare/dariscattare.module#DariscattarePageModule' 
+  },
+  { 
+    path: 'utilizzati', 
+    loadChildren: './mieibuoni/tabs/utilizzati/utilizzati.module#UtilizzatiPageModule' 
   }
 ];
 
