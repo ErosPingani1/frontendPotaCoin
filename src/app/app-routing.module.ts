@@ -30,6 +30,10 @@ const routes: Routes = [
   { 
     path: 'mieiviaggi', 
     loadChildren: './mieiviaggi/mieiviaggi.module#MieiviaggiPageModule' 
+  },
+  { 
+    path: 'invitamico', 
+    loadChildren: './invitamico/invitamico.module#InvitamicoPageModule' 
   }
 ];
 
