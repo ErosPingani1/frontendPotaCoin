@@ -44,6 +44,11 @@ export class AppComponent {
       title: 'Invita un Amico',
       url: '/invitamico',
       icon: 'people'
+    },
+    {
+      title: 'Help',
+      url: '/help',
+      icon: 'help-circle-outline'
     }
   ];
 

@@ -34,6 +34,10 @@ const routes: Routes = [
   { 
     path: 'invitamico', 
     loadChildren: './invitamico/invitamico.module#InvitamicoPageModule' 
+  },
+  { 
+    path: 'help', 
+    loadChildren: './help/help.module#HelpPageModule' 
   }
 ];
 
