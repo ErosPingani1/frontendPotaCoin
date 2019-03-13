@@ -13,10 +13,16 @@ const routes: Routes = [
   },
   { 
     path: 'mieibuoni', 
-    loadChildren: './mieibuoni/mieibuoni.module#MieibuoniPageModule' },
+    loadChildren: './mieibuoni/mieibuoni.module#MieibuoniPageModule' 
+  },
   { 
     path: 'catalogopremi', 
-    loadChildren: './catalogopremi/catalogopremi.module#CatalogopremiPageModule' }
+    loadChildren: './catalogopremi/catalogopremi.module#CatalogopremiPageModule' 
+  },
+  { 
+    path: 'notifiche', 
+    loadChildren: './notifiche/notifiche.module#NotifichePageModule' 
+  }
 ];
 
 @NgModule({

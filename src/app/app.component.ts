@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Catalogo Premi',
       url: '/catalogopremi',
       icon: 'briefcase'
+    },
+    {
+      title: 'Notifiche',
+      url: '/notifiche',
+      icon: 'notifications'
     }
   ];
 
