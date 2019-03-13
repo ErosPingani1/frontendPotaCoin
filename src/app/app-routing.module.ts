@@ -17,8 +17,6 @@ const routes: Routes = [
   }
 ];
 
-//ciao cane
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
