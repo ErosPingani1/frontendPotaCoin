@@ -13,7 +13,10 @@ const routes: Routes = [
   },
   { 
     path: 'mieibuoni', 
-    loadChildren: './mieibuoni/mieibuoni.module#MieibuoniPageModule' }
+    loadChildren: './mieibuoni/mieibuoni.module#MieibuoniPageModule' },
+  { 
+    path: 'catalogopremi', 
+    loadChildren: './catalogopremi/catalogopremi.module#CatalogopremiPageModule' }
 ];
 
 @NgModule({

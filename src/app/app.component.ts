@@ -19,6 +19,11 @@ export class AppComponent {
       title: 'I Miei Buoni',
       url: '/mieibuoni',
       icon: 'gift'
+    },
+    {
+      title: 'Catalogo Premi',
+      url: '/catalogopremi',
+      icon: 'briefcase'
     }
   ];
 
