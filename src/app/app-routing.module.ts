@@ -26,6 +26,10 @@ const routes: Routes = [
   { 
     path: 'elencoesercenti', 
     loadChildren: './elencoesercenti/elencoesercenti.module#ElencoesercentiPageModule' 
+  },
+  { 
+    path: 'mieiviaggi', 
+    loadChildren: './mieiviaggi/mieiviaggi.module#MieiviaggiPageModule' 
   }
 ];
 

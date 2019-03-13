@@ -34,6 +34,11 @@ export class AppComponent {
       title: 'Elenco Esercenti',
       url: '/elencoesercenti',
       icon: 'wine'
+    },
+    {
+      title: 'I Miei Viaggi',
+      url: '/mieiviaggi',
+      icon: 'train'
     }
   ];
 
