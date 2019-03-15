@@ -15,6 +15,7 @@ describe('CatalogoPage', () => {
     .compileComponents();
   }));
 
+  //Qua si spaccava
   beforeEach(() => {
     fixture = TestBed.createComponent(CatalogoPage);
     component = fixture.componentInstance;
