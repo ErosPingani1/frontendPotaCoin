@@ -1,4 +1,17 @@
-.welcome-card ion-img {
-  max-height: 35vh;
+.carousel-container ion-img {
+  max-height: 50vh;
   overflow: hidden;
+}
+
+#ion-card-punti{
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.col-card {
+  margin-top: 1em;
+  background-color: #fff;
+  height: auto;
 }
