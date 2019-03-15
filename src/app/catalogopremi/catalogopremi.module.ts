@@ -9,8 +9,23 @@ import { CatalogopremiPage } from './catalogopremi.page';
 
 const routes: Routes = [
   {
+    path: 'catalogopremi',
+    component: CatalogopremiPage,
+    children: [
+      {
+        path: 'catalogo',
+        loadChildren:'./catalogopremi/tabs/catalogo/catalogo.module#CatalogoPageModule'
+      },
+      {
+        path: 'wishlist',
+        loadChildren: './catalogopremi/tabs/wishlist/wishlist.module#WishlistPageModule'
+      }
+    ]
+  },
+  {
     path: '',
-    component: CatalogopremiPage
+    redirectTo: 'catalogopremi/catalogo',
+    pathMatch: 'full'
   }
 ];
 

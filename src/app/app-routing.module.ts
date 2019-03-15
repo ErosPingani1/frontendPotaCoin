@@ -46,6 +46,14 @@ const routes: Routes = [
   { 
     path: 'utilizzati', 
     loadChildren: './mieibuoni/tabs/utilizzati/utilizzati.module#UtilizzatiPageModule' 
+  },
+  { 
+    path: 'catalogo', 
+    loadChildren: './catalogopremi/tabs/catalogo/catalogo.module#CatalogoPageModule' 
+  },
+  { 
+    path: 'wishlist', 
+    loadChildren: './catalogopremi/tabs/wishlist/wishlist.module#WishlistPageModule' 
   }
 ];
 
