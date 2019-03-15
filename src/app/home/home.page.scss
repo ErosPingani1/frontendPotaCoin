@@ -1,11 +1,16 @@
 .carousel-container ion-img {
-  max-height: 50vh;
+  max-height: 35vh;
   overflow: hidden;
+}
+.img-resp{
+  max-width: 15em;
+  width: 100%;
+  height: auto;
 }
 
 #ion-card-punti{
-  width: 8em;
-  height: 8em;
+  text-align: center;
+  width:auto;
   border-radius: 50%;
   background-color: aqua;
 }
