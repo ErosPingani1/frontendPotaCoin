@@ -1,0 +1,38 @@
+.container {
+  display: inline;
+}
+
+.saldo {
+  width: 250px;
+  height: 50px;
+  padding-top: 10px;
+  float: left;
+}
+
+.coin {
+  border: solid;
+  border-color: #1e2023;
+  border-radius: 30px;
+  background-color: #d33939;
+  height: 30px;
+  min-width: 70px;
+  text-align: center;
+  float: right;
+  margin-right: 50px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.filtri {
+  float: right;
+}
+
+.divider-container {
+  margin: 80px;
+  display: block;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
