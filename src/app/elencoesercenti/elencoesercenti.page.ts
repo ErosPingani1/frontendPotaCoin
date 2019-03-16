@@ -19,7 +19,7 @@ export class ElencoesercentiPage implements OnInit {
     .then(r => r.json())
     .then(j => { /*console.log(j);*/
       console.log(j);
-      JSON.parse(j);
+      /*JSON.parse(j);*/
       for (let i of j) {
         esercenti.push(i);
       }
@@ -38,19 +38,19 @@ export class ElencoesercentiPage implements OnInit {
 //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
 class Esercente {
 
-  id_esercente: number;
+  id: number;
+  tipo_esercente: String;
   nome_attività: string;
   indirizzo: string;
   coordinate: string;
-  partitaiva: string;
+  p_iva: string;
 
-  constructor(id: number, nome: string, indirizzo: string, coordinate: string, partitaiva:string) {
-    this.id_esercente = id;
+  constructor(id: number, nome: string, indirizzo: string, coordinate: string, p_iva:string, tipo_esercente:string) {
+    this.id = id;
     this.nome_attività = nome;
     this.indirizzo = indirizzo;
     this.coordinate = coordinate;
-    this.partitaiva = partitaiva;
-  
+    this.p_iva = p_iva;
+    this.tipo_esercente = tipo_esercente;
   }
-
 }

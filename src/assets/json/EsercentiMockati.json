@@ -1,32 +1,18 @@
-{
-    "esercenti": [
-        {
-            "id_esercente": 10,
-            "nome_attività": "Caffetteria",
-            "indirizzo": "Via Peppino",
-            "coordinate": "45.703347,9.662969",
-            "partitaiva": "CCCVVV1234"
-        },
-        {
-            "id_esercente": 22,
-            "nome_attività": "Cani Strabici",
-            "indirizzo": "Via Catafalco",
-            "coordinate": "45.703345,9.662966",
-            "partitaiva": "AAABBB1234"
-        },
-        {
-            "id_esercente": 33,
-            "nome_attività": "Pettina Kiwi",
-            "indirizzo": "Via Gluck",
-            "coordinate": "45.703340,9.662964",
-            "partitaiva": "EEEWWW1234"
-        },
-        {
-            "id_esercente": 44,
-            "nome_attività": "A",
-            "indirizzo": "Via Kal",
-            "coordinate": "45.703349,9.662962",
-            "partitaiva": "PPPOOO1234"
-        }
-    ]
-}
+[
+    {
+        "coordinate": "9.4561238,42.12345678",
+        "id": 1,
+        "indirizzo": "Via Kal",
+        "nome_attivita": "Marianna",
+        "p_iva": "AG456SVC4",
+        "tipo_esercente": "gelateria"
+    },
+    {
+        "coordinate": "9.4561238,42.12345678",
+        "id": 1,
+        "indirizzo": "Via Kal",
+        "nome_attivita": "PolentOne",
+        "p_iva": "AG456SVC4",
+        "tipo_esercente": "food"
+    }
+]
