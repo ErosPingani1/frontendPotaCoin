@@ -14,6 +14,7 @@ export class ElencoesercentiPage implements OnInit {
 
   constructor(public modalController: ModalController) {}
 
+  //Scrittura del metodo per la creazione del modal con assegnamento di un determinato component e dei props che permettono di passare l'esercente 
   async presentModal(esercentePassato: Esercente) {
     let esercente = new Esercente(esercentePassato.id, esercentePassato.nome_attivita, esercentePassato.indirizzo, esercentePassato.coordinate, esercentePassato.p_iva, esercentePassato.tipo_esercente) 
     const modal = await this.modalController.create({

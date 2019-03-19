@@ -14,5 +14,13 @@
         "nome_attivita": "PolentOne",
         "p_iva": "AG456SVC4",
         "tipo_esercente": "food"
+    },
+    {
+        "coordinate": "9.4561226,28.12345678",
+        "id": 3,
+        "indirizzo": "Piazza dei cani strabici",
+        "nome_attivita": "canistrabici.com",
+        "p_iva": "CSBC00001",
+        "tipo_esercente": "Le cose belle dell'internet"
     }
 ]
