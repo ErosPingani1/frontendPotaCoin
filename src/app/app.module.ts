@@ -1,3 +1,4 @@
+import { DettaglioesercentePage } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -11,8 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    AppComponent,
+    DettaglioesercentePage
+  ],
+  entryComponents: [
+    DettaglioesercentePage
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

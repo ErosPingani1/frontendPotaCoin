@@ -1,4 +1,6 @@
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { DettaglioesercentePage } from './dettaglio/dettaglioesercente/dettaglioesercente.page';
 
 @Component({
   selector: 'app-elencoesercenti',
@@ -10,8 +12,16 @@ export class ElencoesercentiPage implements OnInit {
   //Creazione di lista di esercenti vuota
   esercenti: any = [];
 
-  constructor() {
-   }
+  constructor(public modalController: ModalController) {}
+
+  async presentModal(esercentePassato: Esercente) {
+    let esercente = new Esercente(esercentePassato.id, esercentePassato.nome_attivita, esercentePassato.indirizzo, esercentePassato.coordinate, esercentePassato.p_iva, esercentePassato.tipo_esercente) 
+    const modal = await this.modalController.create({
+      component: DettaglioesercentePage,
+      componentProps: { 'esercente': esercente }
+    });
+    return await modal.present();
+  }
 
   creaDaJson() {
 
@@ -35,18 +45,18 @@ export class ElencoesercentiPage implements OnInit {
 }
 
 //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
-class Esercente {
+export class Esercente {
 
   id: number;
-  tipo_esercente: String;
-  nome_attività: string;
+  tipo_esercente: string;
+  nome_attivita: string;
   indirizzo: string;
   coordinate: string;
   p_iva: string;
 
   constructor(id: number, nome: string, indirizzo: string, coordinate: string, p_iva:string, tipo_esercente:string) {
     this.id = id;
-    this.nome_attività = nome;
+    this.nome_attivita = nome;
     this.indirizzo = indirizzo;
     this.coordinate = coordinate;
     this.p_iva = p_iva;

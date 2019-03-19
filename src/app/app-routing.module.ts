@@ -54,7 +54,12 @@ const routes: Routes = [
   { 
     path: 'wishlist', 
     loadChildren: './catalogopremi/tabs/wishlist/wishlist.module#WishlistPageModule' 
+  },
+  { 
+    path: 'dettaglioesercente', 
+    loadChildren: './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.module#DettaglioesercentePageModule' 
   }
+
 ];
 
 @NgModule({
