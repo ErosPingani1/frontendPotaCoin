@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-<<<<<<< HEAD
-=======
+
 import { ModalController } from '@ionic/angular';
->>>>>>> master
 
 @Component({
   selector: 'app-dettaglioesercente',
