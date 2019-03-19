@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController} from '@ionic/angular';
+
 @Component({
   selector: 'app-inserisciscontrino',
   templateUrl: './inserisciscontrino.page.html',
@@ -9,13 +10,14 @@ export class InserisciscontrinoPage implements OnInit {
 
   constructor(private modalController : ModalController ) { }
 
-  dismissModal(){
-    this.modalController.dismiss();
+  inviaScontrino(){
+    
   }
 
-
-
-
+  dismissModal(){
+    this.modalController.dismiss();
+    return false;
+  }
 
   ngOnInit() {
   }
