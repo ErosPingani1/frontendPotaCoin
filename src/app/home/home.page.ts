@@ -1,4 +1,7 @@
+import { ModalController } from '@ionic/angular';
+
 import { Component, OnInit } from '@angular/core';
+import { InserisciscontrinoPage } from './inserisciscontrino/inserisciscontrino.page';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+  constructor (public modalController: ModalController){}
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: InserisciscontrinoPage,
+    });
+    return await modal.present();
+  }
   
   ngOnInit() {
     this.tryConnection();
@@ -15,5 +27,7 @@ export class HomePage implements OnInit {
   }
 
 }
+
+
 
 
