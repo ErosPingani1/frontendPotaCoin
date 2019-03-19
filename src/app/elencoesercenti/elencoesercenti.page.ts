@@ -7,24 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElencoesercentiPage implements OnInit {
 
-  constructor() { }
+  //Creazione di lista di esercenti vuota
+  esercenti: any = [];
+
+  constructor() {
+   }
 
   creaDaJson() {
-
-     //Creazione di lista di esercenti vuota
-     let esercenti: any = [];
 
     //ForEach che salva il valore del json nella lista
     fetch('assets/json/EsercentiMockati.json')
     .then(r => r.json())
     .then(j => { 
-      console.log(j);
       for (let i of j) {
-        esercenti.push(i);
+        this.esercenti.push(i);
       }
     });
 
-    console.log(esercenti);
+    console.log(this.esercenti);
 
   }
 
@@ -52,4 +52,5 @@ class Esercente {
     this.p_iva = p_iva;
     this.tipo_esercente = tipo_esercente;
   }
+    
 }
