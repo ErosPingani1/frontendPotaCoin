@@ -1,14 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Inserisci scontrino:</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" (click) = "dismissModal()">
+          <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-buttons>
+      <ion-title>Ciao</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
 
 <ion-content padding>
+    <ion-title>Inserisci scontrino:</ion-title>
 
-<form onsubmit="">
-  Inserisci il codice che trovi sullo scontrino:
-  <ion-input name="codice_scontrino" type="text" placeholder="[1;2; ... ]"></ion-input>
-  <ion-button type="submit">Invia</ion-button>
-</form>
+  <form id="form_scontrino" onsubmit="" padding>
+    Inserisci il codice che trovi sullo scontrino:
+    <ion-input name="codice_scontrino" type="text" placeholder="[1;2; ... ]"></ion-input>
+    <ion-button type="submit">Invia</ion-button>
+  </form>
 </ion-content>
+
