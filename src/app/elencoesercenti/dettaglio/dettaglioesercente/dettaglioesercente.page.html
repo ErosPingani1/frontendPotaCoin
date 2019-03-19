@@ -3,12 +3,14 @@
       <ion-buttons slot="start">
         <ion-button (click)="closemodal()">Indietro</ion-button>
       </ion-buttons>
-      <ion-title>{{ esercente.nome_attivita }}</ion-title>
-      <ion-title>{{ esercente.nome }}</ion-title>
+      <ion-title>Dettaglio Esercente</ion-title>
     </ion-toolbar>
   </ion-header>
 
 <!-- Per utilizzare gli swipe / pan è stato necessario installare ed importare hammerjs -->
 <ion-content (pandown)="closemodal()" padding>
-
+  <img src='assets/img/mp.jpg' alt="logoesercente">
+  <br>
+  <h1 id="titoloesercente">{{ esercente.nome_attivita }}</h1>
+  <h4 id="tipoesercente">{{ esercente.tipo_esercente }}</h4>
 </ion-content>
