@@ -1,4 +1,6 @@
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { DettaglioesercentePage } from './dettaglio/dettaglioesercente/dettaglioesercente.page';
 
 @Component({
   selector: 'app-elencoesercenti',
@@ -10,8 +12,15 @@ export class ElencoesercentiPage implements OnInit {
   //Creazione di lista di esercenti vuota
   esercenti: any = [];
 
-  constructor() {
-   }
+  constructor(public modalController: ModalController) {}
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: DettaglioesercentePage,
+      componentProps: { esercente: Esercente }
+    });
+    return await modal.present();
+  }
 
   creaDaJson() {
 
