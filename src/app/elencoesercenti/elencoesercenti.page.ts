@@ -12,14 +12,13 @@ export class ElencoesercentiPage implements OnInit {
   creaDaJson() {
 
      //Creazione di lista di esercenti vuota
-     let esercenti: any[];
+     let esercenti: any = [];
 
     //ForEach che salva il valore del json nella lista
     fetch('assets/json/EsercentiMockati.json')
     .then(r => r.json())
-    .then(j => { /*console.log(j);*/
+    .then(j => { 
       console.log(j);
-      /*JSON.parse(j);*/
       for (let i of j) {
         esercenti.push(i);
       }
