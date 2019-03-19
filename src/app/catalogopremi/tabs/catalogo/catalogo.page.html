@@ -13,6 +13,18 @@
         <hr class="divider">
     </div>
     <div class="vaucher-container">
-
+    <ion-grid>
+        <ion-col>
+            <ion-row>
+                <ion-card class="vaucher" *ngFor="let vaucher of vauchers">
+                    <ion-card-header>
+                        <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
+                        <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
+                </ion-card>
+            </ion-row>
+        </ion-col>
+    </ion-grid>
     </div>
 </ion-content>

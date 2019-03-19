@@ -35,18 +35,18 @@ export class ElencoesercentiPage implements OnInit {
 }
 
 //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
-class Esercente {
+export class Esercente {
 
   id: number;
   tipo_esercente: String;
-  nome_attività: string;
+  nome_attivita: string;
   indirizzo: string;
   coordinate: string;
   p_iva: string;
 
   constructor(id: number, nome: string, indirizzo: string, coordinate: string, p_iva:string, tipo_esercente:string) {
     this.id = id;
-    this.nome_attività = nome;
+    this.nome_attivita = nome;
     this.indirizzo = indirizzo;
     this.coordinate = coordinate;
     this.p_iva = p_iva;
