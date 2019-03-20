@@ -19,7 +19,8 @@ export class ElencoesercentiPage implements OnInit {
     let esercente = new Esercente(esercentePassato.id, esercentePassato.nome_attivita, esercentePassato.indirizzo, esercentePassato.coordinate, esercentePassato.p_iva, esercentePassato.tipo_esercente) 
     const modal = await this.modalController.create({
       component: DettaglioesercentePage,
-      componentProps: { 'esercente': esercente }
+      componentProps: { 'esercente': esercente },
+      cssClass: 'customModal'
     });
     return await modal.present();
   }

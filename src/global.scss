@@ -15,11 +15,14 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  rosinobello: #E94E58,
+  griginobordo: #575555
 );
 
 //Classe per i modal per fare in modo chq questi vengano visualizzati in maniera "a carta" e non come pagina intera 
 .customModal {
   background: rgba(0, 0, 0, 0.5);
   padding: 20% 10%;
+  --border-radius: 0.7em;
 }

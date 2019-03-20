@@ -1,3 +1,7 @@
-<ion-content padding>
-  <h3>Cazzodigomma</h3>
+<ion-content (pandown)="closemodal()" padding>
+  <ion-icon name="arrow-round-back" id="arrow" (click)="closemodal()"></ion-icon>
+  <img src="assets/img/lamarianna.png" alt="logo" id="logo">
+  <p id="titolo">{{ news.titolo }}</p>
+  <p id="data">{{ news.data }}</p>
+  <p id="descrizione">{{ news.descrizione }}</p>
 </ion-content>

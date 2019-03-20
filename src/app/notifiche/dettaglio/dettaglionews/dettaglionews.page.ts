@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dettaglionews',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DettaglionewsPage implements OnInit {
 
-  constructor() { }
+  //Lettura del valore news passato tramite props
+  @Input() news: any;
+
+  constructor(private modalCtrl: ModalController) {}
+
+  closemodal() {
+    this.modalCtrl.dismiss();
+  }
 
   ngOnInit() {
+    console.log(this.news)
   }
 
 }
