@@ -28,7 +28,6 @@ import { InserisciscontrinoPage } from './home/inserisciscontrino/inserisciscont
     IonicModule.forRoot(),
     AppRoutingModule
   ],
-  
   providers: [
     StatusBar,
     SplashScreen,
