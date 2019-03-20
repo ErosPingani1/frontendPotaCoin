@@ -36,11 +36,6 @@ export class AppComponent {
       icon: 'wine'
     },
     {
-      title: 'I miei Viaggi',
-      url: '/mieiviaggi',
-      icon: 'train'
-    },
-    {
       title: 'Invita un Amico',
       url: '/invitamico',
       icon: 'people'

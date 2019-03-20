@@ -27,10 +27,6 @@ const routes: Routes = [
     path: 'elencoesercenti', 
     loadChildren: './elencoesercenti/elencoesercenti.module#ElencoesercentiPageModule' 
   },
-  { 
-    path: 'mieiviaggi', 
-    loadChildren: './mieiviaggi/mieiviaggi.module#MieiviaggiPageModule' 
-  },
   {
     path: 'invitamico', 
     loadChildren: './invitamico/invitamico.module#InvitamicoPageModule' 
@@ -58,7 +54,8 @@ const routes: Routes = [
   { 
     path: 'dettaglioesercente', 
     loadChildren: './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.module#DettaglioesercentePageModule' 
-  },  { path: 'inserisciscontrino', loadChildren: './home/inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' }
+  },
+  { path: 'inserisciscontrino', loadChildren: './home/inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' }
 
 
 ];
