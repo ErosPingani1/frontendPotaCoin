@@ -22,12 +22,12 @@
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.filtri {
-  float: right;
+.barra-ricerca {
+
 }
 
 .divider-container {
-  margin: 80px;
+  margin: 30px;
   display: block;
 }
 
@@ -39,10 +39,26 @@
 
 .vaucher-container{
   margin: 50px;
-  margin-top: -70px;
+  margin-top: -50px;
+}
+.grid{
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  left: -2%;
 }
 
 .vaucher {
-  width: 200px;
-  height: 200px;
+  width: 90%;
+  height: 90%;
+  box-shadow: 5px 5px 5px 0px rgba(31, 31, 79, 0.39);
+  background-color: rgba(255, 248, 3, 0.6);
+  text-align: center;
+  border-radius: 30px;
+
+
+  ion-card-title {
+    color: red;
+    font-size: large;
+  }
 }

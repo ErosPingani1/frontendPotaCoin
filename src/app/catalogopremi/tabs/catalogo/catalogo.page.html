@@ -4,27 +4,24 @@
         <div class="saldo">I tuoi crediti:
             <div class="coin">1000</div>
         </div>
-        <div class="filtri">
-            <ion-icon name="search" size="large" style="margin: 5px;"></ion-icon>
-            <ion-icon name="options" size="large" style="margin: 5px;"></ion-icon>
-        </div>
+        <ion-searchbar class="barra-ricerca" placeholder="Cerca Buono"></ion-searchbar>
     </div>
     <div class="divider-container">
         <hr class="divider">
     </div>
     <div class="vaucher-container">
-    <ion-grid>
-        <ion-col>
+        <ion-grid class="grid">
             <ion-row>
-                <ion-card class="vaucher" *ngFor="let vaucher of vauchers">
-                    <ion-card-header>
-                        <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
-                        <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
-                    </ion-card-header>
-                    <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
-                </ion-card>
+                <ion-col class="col-grid" size="6" size-lg="3" *ngFor="let vaucher of vauchers">
+                    <ion-card class="vaucher" >
+                        <ion-card-header>
+                            <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
+                            <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
+                    </ion-card>
+                </ion-col>
             </ion-row>
-        </ion-col>
-    </ion-grid>
+        </ion-grid>
     </div>
 </ion-content>
