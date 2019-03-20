@@ -1,3 +1,4 @@
+import { DettaglionewsPage } from './notifiche/dettaglio/dettaglionews/dettaglionews.page';
 import { DettaglioesercentePage } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,11 +17,13 @@ import { InserisciscontrinoPage } from './home/inserisciscontrino/inserisciscont
   declarations: [
     AppComponent,
     DettaglioesercentePage,
-    InserisciscontrinoPage
+    InserisciscontrinoPage,
+    DettaglionewsPage
   ],
   entryComponents: [
     DettaglioesercentePage,
-    InserisciscontrinoPage
+    InserisciscontrinoPage,
+    DettaglionewsPage
   ],
   imports: [
     BrowserModule,

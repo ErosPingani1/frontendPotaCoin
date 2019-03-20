@@ -9,10 +9,12 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let news of news">
+  <p id="news">Novità</p>
+
+  <ion-card *ngFor="let notizia of news" (click)="presentModal(notizia)">
     <ion-card-header>
-      <ion-card-subtitle>{{ news.data }}</ion-card-subtitle>
-      <ion-card-title id="titolo">{{ news.titolo }}</ion-card-title>
+      <ion-card-subtitle>{{ notizia.data }}</ion-card-subtitle>
+      <ion-card-title id="titolo">{{ notizia.titolo }}</ion-card-title>
       <img src="assets/img/lamarianna.png" alt="logo" id="logo">
     </ion-card-header>
   </ion-card>

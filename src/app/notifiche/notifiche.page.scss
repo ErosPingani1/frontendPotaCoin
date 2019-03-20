@@ -12,6 +12,7 @@ ion-card {
 #titolo {
     text-align: center;
     text-transform: uppercase;
+    color: #E94E58;
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -22,4 +23,14 @@ ion-card {
     margin-right: auto;
     width: 100px;
     height: 100px;
+}
+
+#news {
+    color: #575555;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
 }

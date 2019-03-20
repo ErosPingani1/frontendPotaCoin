@@ -55,8 +55,14 @@ const routes: Routes = [
     path: 'dettaglioesercente', 
     loadChildren: './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.module#DettaglioesercentePageModule' 
   },
-  { path: 'inserisciscontrino', loadChildren: './home/inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' }
-
+  { 
+    path: 'inserisciscontrino', 
+    loadChildren: './home/inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' 
+  },
+  { 
+    path: 'dettaglionews', 
+    loadChildren: './notifiche/dettaglio/dettaglionews/dettaglionews.module#DettaglionewsPageModule' 
+  }
 
 ];
 
