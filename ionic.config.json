@@ -1,5 +1,7 @@
 {
   "name": "frontendPotaCoin",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

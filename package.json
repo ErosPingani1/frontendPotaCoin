@@ -25,6 +25,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
     "@types/jquery": "^3.3.29",
+    "angular-hammer": "^2.2.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "requirejs": "^2.3.6",
