@@ -1,3 +1,24 @@
 <ion-content padding>
-  <h3>Buoni Utilizzati</h3>
+    <h3>Buoni Utilizzati</h3>
+    <div class="container">
+        <ion-searchbar class="barra-ricerca" placeholder="Cerca Buono"></ion-searchbar>
+    </div>
+    <div class="divider-container">
+        <hr class="divider">
+    </div>
+    <div class="vaucher-container">
+        <ion-grid class="grid">
+            <ion-row>
+                <ion-col class="col-grid" size="6" size-lg="3" *ngFor="let vaucher of vauchers">
+                    <ion-card class="vaucher">
+                        <ion-card-header>
+                            <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
+                            <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>

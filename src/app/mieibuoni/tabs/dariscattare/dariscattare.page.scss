@@ -1,0 +1,64 @@
+.container {
+  display: inline;
+}
+
+.saldo {
+  width: 250px;
+  height: 50px;
+  padding-top: 10px;
+  float: left;
+}
+
+.coin {
+  border: solid;
+  border-color: #1e2023;
+  border-radius: 30px;
+  background-color: #d33939;
+  height: 30px;
+  min-width: 70px;
+  text-align: center;
+  float: right;
+  margin-right: 50px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.barra-ricerca {
+
+}
+
+.divider-container {
+  margin: 35px;
+  display: block;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.vaucher-container{
+  margin: 50px;
+  margin-top: -50px;
+}
+.grid{
+  width: 100%;
+  position: absolute;
+  top: 200px;
+  left: 0%;
+}
+
+.vaucher {
+  width: 90%;
+  height: 90%;
+  box-shadow: 5px 5px 5px 0px rgba(31, 31, 79, 0.39);
+  background-color: rgba(255, 248, 3, 0.6);
+  text-align: center;
+  border-radius: 30px;
+
+
+  ion-card-title {
+    color: red;
+    font-size: large;
+  }
+}
