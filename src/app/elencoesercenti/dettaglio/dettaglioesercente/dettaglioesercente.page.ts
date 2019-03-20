@@ -14,7 +14,9 @@ export class DettaglioesercentePage implements OnInit {
   constructor(private modalCtrl: ModalController) {}
 
   closemodal() {
+
     this.modalCtrl.dismiss();
+
   }
 
   ngOnInit() {
