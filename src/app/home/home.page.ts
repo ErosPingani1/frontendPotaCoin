@@ -1,8 +1,7 @@
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 import { Component, OnInit } from '@angular/core';
 import { InserisciscontrinoPage } from './inserisciscontrino/inserisciscontrino.page';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -10,7 +9,7 @@ import { InserisciscontrinoPage } from './inserisciscontrino/inserisciscontrino.
 })
 export class HomePage implements OnInit {
 
-  constructor (public modalController: ModalController){}
+  constructor(public modalController: ModalController, public navController: NavController) { }
 
   async presentModal() {
     const modal = await this.modalController.create({
@@ -18,7 +17,7 @@ export class HomePage implements OnInit {
     });
     return await modal.present();
   }
-  
+
   ngOnInit() {
     this.tryConnection();
   }
@@ -27,7 +26,3 @@ export class HomePage implements OnInit {
   }
 
 }
-
-
-
-

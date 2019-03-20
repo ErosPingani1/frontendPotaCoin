@@ -1,5 +1,10 @@
+ion-content {
+  
+}
+
 .container {
   display: inline;
+
 }
 
 .saldo {
@@ -37,11 +42,12 @@
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.vaucher-container{
+.vaucher-container {
   margin: 50px;
   margin-top: -50px;
 }
-.grid{
+
+.grid {
   width: 100%;
   position: absolute;
   top: 200px;
@@ -51,14 +57,16 @@
 .vaucher {
   width: 90%;
   height: 90%;
-  box-shadow: 5px 5px 5px 0px rgba(31, 31, 79, 0.39);
-  background-color: rgba(255, 248, 3, 0.6);
   text-align: center;
-  border-radius: 30px;
-
+  --background: #fff;
+  border: 0.1em solid grey;
+  border-radius: 1.5em;
+  box-shadow: 0.188em 0.188em 0.938em #575555;
 
   ion-card-title {
     color: red;
     font-size: large;
   }
 }
+
+
