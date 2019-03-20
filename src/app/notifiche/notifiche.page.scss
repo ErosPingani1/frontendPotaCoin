@@ -1,25 +1,25 @@
 ion-content {
-    --background: url('../../assets/img/Backgroundimg.jpg');
+  --background: url('../../assets/img/Backgroundimg.jpg');
 }
 
 ion-card {
-    --background: #fff;
-    border: 0.1em solid grey;
-    border-radius: 1.5em;
-    box-shadow: 0.188em 0.188em 0.938em #575555;
+  --background: #fff;
+  border: 0.1em solid grey;
+  border-radius: 1.5em;
+  box-shadow: 0.188em 0.188em 0.938em #575555;
 }
 
 #titolo {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 #logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
 }

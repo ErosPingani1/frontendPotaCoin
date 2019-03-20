@@ -51,10 +51,11 @@
 .vaucher {
   width: 90%;
   height: 90%;
-  box-shadow: 5px 5px 5px 0px rgba(31, 31, 79, 0.39);
-  background-color: rgba(255, 248, 3, 0.6);
   text-align: center;
-  border-radius: 30px;
+  --background: #fff;
+  border: 0.1em solid grey;
+  border-radius: 1.5em;
+  box-shadow: 0.188em 0.188em 0.938em #575555;
 
 
   ion-card-title {
