@@ -3,10 +3,18 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Notifiche</ion-title>
+    <ion-title>Notizie</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-card *ngFor="let news of news">
+    <ion-card-header>
+      <ion-card-subtitle>{{ news.data }}</ion-card-subtitle>
+      <ion-card-title id="titolo">{{ news.titolo }}</ion-card-title>
+      <img src="assets/img/lamarianna.png" alt="logo" id="logo">
+    </ion-card-header>
+  </ion-card>
 
 </ion-content>

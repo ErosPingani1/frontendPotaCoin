@@ -26,7 +26,7 @@ export class AppComponent {
       icon: 'star'
     },
     {
-      title: 'Notifiche',
+      title: 'Notizie',
       url: '/notifiche',
       icon: 'notifications'
     },
