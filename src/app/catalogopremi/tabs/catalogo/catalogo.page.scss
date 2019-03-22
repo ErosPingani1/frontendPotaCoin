@@ -2,29 +2,35 @@ ion-content {
   --background: url('~src/assets/img/Backgroundimg.jpg');
 }
 
-.container {
-  display: inline;
-
-}
-
 .saldo {
-  width: 250px;
+  width: 100%;
   height: 50px;
-  padding-top: 10px;
-  float: left;
+  float: right;
+  display: flex;
 }
 
 .coin {
-  border: solid;
   border-color: #1e2023;
-  border-radius: 30px;
-  background-color: #d33939;
-  height: 30px;
-  min-width: 70px;
-  text-align: center;
-  float: right;
-  margin-right: 50px;
+  background-color: #E94E58;
+  border-radius: 10px;
+  height: 45px;
+  min-width: 100px;
+  width: 210px;
+  margin:auto;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.img-coin{
+  rotation: 180deg;
+  max-width:17%;
+  height:auto;
+  float: right;
+}
+
+.your-coin{
+  margin-top: 3.5px;
+  color: #ffffff;
+  font-size: medium;
 }
 
 .barra-ricerca {
