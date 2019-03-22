@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
     selector: 'app-dariscattare',
@@ -8,6 +8,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class DariscattarePage implements OnInit {
     vauchers: any = [];
+
     constructor(private http: HttpClient) {
 
     }
@@ -15,7 +16,7 @@ export class DariscattarePage implements OnInit {
     creaDaJson() {
 
         //Creazione di lista di vaucher vuota
-        console.log("prova")
+        console.log('prova');
 
         //ForEach che salva il valore del json nella lista
         fetch('assets/json/PremiMockati.json')
