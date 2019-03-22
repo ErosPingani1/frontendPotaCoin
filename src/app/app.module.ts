@@ -1,4 +1,3 @@
-import { HeaderComponent } from './header/header.component';
 import { DettaglionewsPage } from './notifiche/dettaglio/dettaglionews/dettaglionews.page';
 import { DettaglioesercentePage } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.page';
 import { NgModule } from '@angular/core';
@@ -19,8 +18,7 @@ import { InserisciscontrinoPage } from './home/inserisciscontrino/inserisciscont
     AppComponent,
     DettaglioesercentePage,
     InserisciscontrinoPage,
-    DettaglionewsPage,
-    HeaderComponent
+    DettaglionewsPage
   ],
   entryComponents: [
     DettaglioesercentePage,
