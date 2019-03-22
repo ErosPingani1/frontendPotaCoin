@@ -5,12 +5,12 @@
     </ion-buttons>
     <ion-title>Elenco Esercenti</ion-title>
   </ion-toolbar>
-  <ion-searchbar placeholder="Cerca..."></ion-searchbar>
+
 </ion-header>
 
 <ion-content padding>
-
-  <ion-card *ngFor="let esercente of esercenti" (click)="presentModal(esercente)">
+  <ion-searchbar placeholder="Cerca..."></ion-searchbar>
+  <ion-card *ngFor="let esercente of esercenti" (click)="presentModal(esercente)" class="pointer">
     <img src="" alt="">
     <ion-card-header>
       <ion-card-subtitle>{{ esercente.indirizzo }}</ion-card-subtitle>

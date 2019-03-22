@@ -55,14 +55,18 @@ ion-content {
   width: 90%;
   height: 90%;
   text-align: center;
-  --background: #fff;
+  background-color: #f0f0f0;
   border: 0.1em solid grey;
   border-radius: 1.5em;
   box-shadow: 0.188em 0.188em 0.938em #575555;
 
 
   ion-card-title {
-    color: red;
+    color: #626262;
     font-size: large;
   }
+}
+
+.pointer{
+  cursor: pointer;
 }

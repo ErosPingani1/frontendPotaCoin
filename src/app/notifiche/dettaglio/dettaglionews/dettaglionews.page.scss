@@ -1,6 +1,4 @@
-ion-content {
-    --background: url('~src/assets/img/Backgroundimg.jpg');
-}
+
 #arrow {
     width: 2em;
     height: 2em;
@@ -29,4 +27,8 @@ ion-content {
 #descrizione {
     text-align: center;
     font-size: 0.7em;
+}
+
+.pointer {
+    cursor: pointer;
 }
