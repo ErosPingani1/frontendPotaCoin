@@ -1,4 +1,3 @@
-import { CustomHeaderModule } from './../customheader/customheader.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InvitamicoPage } from './invitamico.page';
+import { MioprofiloPage } from './mioprofilo.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: InvitamicoPage
+    component: MioprofiloPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    CustomHeaderModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [InvitamicoPage]
+  declarations: [MioprofiloPage]
 })
-export class InvitamicoPageModule {}
+export class MioprofiloPageModule {}

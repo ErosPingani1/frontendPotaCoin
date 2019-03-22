@@ -15,10 +15,10 @@ export class DariscattarePage implements OnInit {
 
     creaDaJson() {
 
-        //Creazione di lista di vaucher vuota
+        // Creazione di lista di vaucher vuota
         console.log('prova');
 
-        //ForEach che salva il valore del json nella lista
+        // ForEach che salva il valore del json nella lista
         fetch('assets/json/PremiMockati.json')
             .then(r => r.json())
             .then(j => {
