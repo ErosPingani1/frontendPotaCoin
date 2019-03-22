@@ -1,3 +1,4 @@
+import { CustomHeaderModule } from './../customheader/customheader.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -34,6 +35,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    CustomHeaderModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
