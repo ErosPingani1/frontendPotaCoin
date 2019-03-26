@@ -22,9 +22,20 @@
 
 
     <div id="ion-card-punti">
-     
+      <div>
+        <div>
+          <div  class="grafico" style="display: block">
+            <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType">
+            </canvas>
+          </div>
+        </div>
+      </div>
+
     </div>
-  
+
 
   <ion-grid>
     <ion-row>
