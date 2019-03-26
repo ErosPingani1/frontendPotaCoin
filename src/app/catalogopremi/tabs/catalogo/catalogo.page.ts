@@ -47,7 +47,7 @@ export class CatalogoPage implements OnInit {
 
 
     getAllBuoni() {
-        this.http.get('http://localhost:9090/potacoin/potacoinbackend/buoni/all', {
+        this.http.get('http://192.168.43.134:9090/potacoin/potacoinbackend/buoni/all', {
             headers:
                 new HttpHeaders(
                     {

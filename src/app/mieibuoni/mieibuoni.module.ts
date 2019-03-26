@@ -15,11 +15,11 @@ const routes: Routes = [
     children: [
       {
         path: 'dariscattare',
-        loadChildren: './mieibuoni/tabs/dariscattare/dariscattare.module#DariscattarePageModule'
+        loadChildren: './tabs/dariscattare/dariscattare.module#DariscattarePageModule'
       },
       {
         path: 'utilizzati',
-        loadChildren: './mieibuoni/tabs/utilizzati/utilizzati.module#UtilizzatiPageModule'
+        loadChildren: './tabs/utilizzati/utilizzati.module#UtilizzatiPageModule'
       }
     ]
   },
