@@ -15,11 +15,11 @@ const routes: Routes = [
     children: [
       {
         path: 'catalogo',
-        loadChildren:'./catalogopremi/tabs/catalogo/catalogo.module#CatalogoPageModule'
+        loadChildren:'./tabs/catalogo/catalogo.module#CatalogoPageModule'
       },
       {
         path: 'wishlist',
-        loadChildren: './catalogopremi/tabs/wishlist/wishlist.module#WishlistPageModule'
+        loadChildren: './tabs/wishlist/wishlist.module#WishlistPageModule'
       }
     ]
   },
