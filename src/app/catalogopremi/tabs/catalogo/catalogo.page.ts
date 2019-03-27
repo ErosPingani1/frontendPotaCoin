@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Esercente} from "../../../elencoesercenti/elencoesercenti.page";
 
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 

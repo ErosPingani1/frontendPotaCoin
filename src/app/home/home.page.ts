@@ -11,7 +11,6 @@ import { MultiDataSet, Label } from 'ng2-charts';
 })
 
 
-
 export class HomePage implements OnInit {
     // Doughnut
     public doughnutChartLabels: Label[] = [];
@@ -31,8 +30,6 @@ export class HomePage implements OnInit {
     });
     return await modal.present();
   }
-
-
 
   ngOnInit() {
     this.tryConnection();
