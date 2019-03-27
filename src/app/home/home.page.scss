@@ -2,6 +2,10 @@ ion-content {
   --background: url('~src/assets/img/Backgroundimg.jpg');
 }
 
+ion-row {
+  justify-content: center;
+}
+
 .carousel-container {
   overflow: hidden;
 }
@@ -9,8 +13,6 @@ ion-content {
   width: 100%;
   height: auto;
 }
-
-
 
 .grafico {
   margin:auto;
@@ -24,8 +26,16 @@ ion-content {
 
 .col-card {
   margin-top: 1em;
-  background-color: #fff;
+  background-color: #ffffff;
   height: auto;
+  border-radius: 0.625em;
+  border: 0.1em solid grey;
+  box-shadow: 0.188em 0.188em 0.938em #575555;
+}
+
+.card-description {
+  text-align: center;
+  font-size: 0.688em;
 }
 
 .pointer {
