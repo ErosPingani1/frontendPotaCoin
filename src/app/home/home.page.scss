@@ -1,5 +1,5 @@
 ion-content {
-  --background: url('~src/assets/img/Backgroundimg.jpg');
+  --background: url('~src/assets/img/ECECEC.png');
 }
 
 ion-row {
@@ -8,19 +8,57 @@ ion-row {
 
 .carousel-container {
   overflow: hidden;
+  background: #ffffff;
+  height: 25%;
 }
+
+.carousel-container:after {
+  width: 200px;
+  height: 100px;
+  border-radius: 200px 200px 0px 0px;
+  background-color: #ececec;
+  display: block;
+  margin:auto;
+  content: '';
+}
+
 .img-resp{
   width: 100%;
   height: auto;
 }
 
+.sfondoGrafico{
+
+}
+
 .grafico {
-  margin:auto;
-  width: 100%;
+  margin-left: 10.25%;
+  margin-top: -5%;
+  width: 80%;
   height: auto;
 }
 
 .canvas{
+ position:absolute;
+  color: yellow;
+}
+
+.img-coin{
+  width: 40%;
+  height: auto;
+  z-index: 10;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: -41%;
+}
+
+.saldo{
+  z-index: 10;
+  position: absolute;
+  margin-left: 32%;
+  margin-top: -25%;
+  font-size: 30px;
+  color: #E94E58;
 
 }
 
