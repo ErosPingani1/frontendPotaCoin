@@ -10,16 +10,16 @@ ion-content {
   height: auto;
 }
 
-#ion-card-punti{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -3em;
-  text-align: center;
-  width:9em;
-  height:9em;
-  border-radius: 50%;
-  background-color: #ECECEC;
+
+
+.grafico {
+  margin:auto;
+  width: 100%;
+  height: auto;
+}
+
+.canvas{
+
 }
 
 .col-card {
@@ -31,3 +31,6 @@ ion-content {
 .pointer {
   cursor: pointer;
 }
+
+
+
