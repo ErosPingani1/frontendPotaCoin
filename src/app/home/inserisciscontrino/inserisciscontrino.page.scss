@@ -6,8 +6,22 @@ ion-content {
     --color: black;
     --color-activated: #E94E58;
     text-transform: none;
+    font-size: 0.688em;
 }
 
 form{
+    margin-top:3.125em;
     text-align: center;
+    align-content: center;
+}
+
+.inputscontrino {
+    margin: auto;
+    width: 15.625em;
+    border-bottom: 0.063em solid grey;
+    text-align: start;
+}
+
+.buttonscontrino {
+    height: 1.875em;
 }

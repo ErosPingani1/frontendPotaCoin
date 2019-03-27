@@ -9,8 +9,10 @@
 
   <form formGroup="scontrinoform" id="form_scontrino" (submit)="inviaScontrino()" padding>
     <p>Inserisci il codice che trovi sullo scontrino:</p>
-    <ion-input name="codice_scontrino" type="text" placeholder="codice scontrino"></ion-input>
-    <ion-button type="submit">Invia</ion-button>
+    <!--<ion-input name="codice_scontrino" type="text" placeholder="Inserisci codice" required="true"></ion-input>-->
+    <ion-input clearInput type="text" placeholder="Inserisci codice" required="true" class="inputscontrino"></ion-input>
+    <br/>
+    <ion-button type="submit" color="danger" class="buttonscontrino">Conferma</ion-button>
   </form>
 
 </ion-content>
