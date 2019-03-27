@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
     // Doughnut
     public doughnutChartLabels: Label[] = [];
     public doughnutChartData: MultiDataSet = [
-        [100],
+        [0,0,57,0,0,0,90],
         [0],
         [0],
     ];
