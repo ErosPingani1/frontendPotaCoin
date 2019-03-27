@@ -8,7 +8,11 @@ import { NgModule } from "@angular/core";
         CommonModule,
         IonicModule
     ],
-    declarations: [CustomheaderComponent],
-    exports: [CustomheaderComponent]
+    declarations: [
+        CustomheaderComponent
+    ],
+    exports: [
+        CustomheaderComponent
+    ]
 })
 export class CustomHeaderModule {}

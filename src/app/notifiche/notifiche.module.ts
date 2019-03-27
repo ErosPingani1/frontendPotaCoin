@@ -21,7 +21,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     CustomHeaderModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes)
   ],
   declarations: [
     NotifichePage

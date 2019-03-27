@@ -1,3 +1,4 @@
+import { CustomHeaderModule } from './customheader/customheader.module';
 import { DettaglionewsPage } from './notifiche/dettaglio/dettaglionews/dettaglionews.page';
 import { DettaglioesercentePage } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.page';
 import { NgModule } from '@angular/core';
@@ -29,7 +30,8 @@ import { InserisciscontrinoPage } from './home/inserisciscontrino/inserisciscont
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    CustomHeaderModule
   ],
   providers: [
     StatusBar,

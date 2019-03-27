@@ -1,15 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="dismissModal()">Indietro</ion-button>
-    </ion-buttons>
-    <ion-title>Inserisci codice</ion-title>
+<app-customheader></app-customheader>
 
-  </ion-toolbar>
-</ion-header>
 <ion-content padding>
-
-  <form formGroup = "scontrinoform" id="form_scontrino" (submit)="inviaScontrino();" padding>
+  <form formGroup="scontrinoform" id="form_scontrino" (submit)="inviaScontrino()" padding>
     <p>Inserisci il codice che trovi sullo scontrino:</p>
     <ion-input name="codice_scontrino" type="text" placeholder="codice scontrino"></ion-input>
     <ion-button type="submit">Invia</ion-button>

@@ -63,7 +63,6 @@ export class CatalogoPage implements OnInit {
 
         //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
 
-
     }
 }
 

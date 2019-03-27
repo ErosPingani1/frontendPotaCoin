@@ -13,7 +13,7 @@ export class HomePage implements OnInit {
 
   async presentModal() {
     const modal = await this.modalController.create({
-      component: InserisciscontrinoPage,
+      component: InserisciscontrinoPage
     });
     return await modal.present();
   }

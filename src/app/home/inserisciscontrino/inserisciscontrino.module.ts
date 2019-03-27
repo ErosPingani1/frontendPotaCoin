@@ -1,11 +1,12 @@
+import { CustomHeaderModule } from './../../customheader/customheader.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
 import { InserisciscontrinoPage } from './inserisciscontrino.page';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -17,10 +18,13 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
+    FormsModule,
+    CustomHeaderModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [InserisciscontrinoPage]
+  declarations: [
+    InserisciscontrinoPage
+  ]
 })
 export class InserisciscontrinoPageModule {}
