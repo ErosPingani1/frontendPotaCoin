@@ -1,6 +1,5 @@
 import { ModalController, NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
-import { InserisciscontrinoPage } from './inserisciscontrino/inserisciscontrino.page';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
 
@@ -22,14 +21,7 @@ export class HomePage implements OnInit {
     public doughnutChartType: ChartType = 'doughnut';
 
 
-  constructor(public modalController: ModalController, public navController: NavController) { }
-
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: InserisciscontrinoPage
-    });
-    return await modal.present();
-  }
+  constructor(public navController: NavController) { }
 
   ngOnInit() {
     this.tryConnection();

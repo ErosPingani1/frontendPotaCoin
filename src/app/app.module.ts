@@ -13,17 +13,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { InserisciscontrinoPage } from './home/inserisciscontrino/inserisciscontrino.page';
 @NgModule({
   declarations: [
     AppComponent,
     DettaglioesercentePage,
-    InserisciscontrinoPage,
     DettaglionewsPage
   ],
   entryComponents: [
     DettaglioesercentePage,
-    InserisciscontrinoPage,
     DettaglionewsPage
   ],
   imports: [

@@ -56,14 +56,13 @@ const routes: Routes = [
     loadChildren: './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.module#DettaglioesercentePageModule' 
   },
   { 
-    path: 'inserisciscontrino', 
-    loadChildren: './home/inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' 
-  },
-  { 
     path: 'dettaglionews', 
     loadChildren: './notifiche/dettaglio/dettaglionews/dettaglionews.module#DettaglionewsPageModule' 
+  },
+  { 
+    path: 'inserisciscontrino', 
+    loadChildren: './inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' 
   }
-
 ];
 
 @NgModule({
