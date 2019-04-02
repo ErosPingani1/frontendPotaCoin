@@ -18,16 +18,16 @@ ion-row {
   border-radius: 200px 200px 0px 0px;
   background-color: #ececec;
   display: block;
-  margin:auto;
+  margin: auto;
   content: '';
 }
 
-.img-resp{
+.img-resp {
   width: 100%;
   height: auto;
 }
 
-.sfondoGrafico{
+.sfondoGrafico {
 
 }
 
@@ -38,12 +38,12 @@ ion-row {
   height: auto;
 }
 
-.canvas{
- position:absolute;
+.canvas {
+  position: absolute;
   color: yellow;
 }
 
-.img-coin{
+.img-coin {
   width: 40%;
   height: auto;
   z-index: 10;
@@ -52,7 +52,7 @@ ion-row {
   margin-top: -41%;
 }
 
-.saldo{
+.saldo {
   z-index: 10;
   position: absolute;
   margin-left: 32%;
