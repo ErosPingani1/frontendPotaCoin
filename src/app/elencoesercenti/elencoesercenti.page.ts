@@ -25,23 +25,21 @@ export class ElencoesercentiPage implements OnInit {
     return await modal.present();
   }
 
-  creaDaJson() {
-
-    //ForEach che salva il valore del json nella lista
-    fetch('assets/json/EsercentiMockati.json')
-    .then(r => r.json())
-    .then(j => { 
-      for (let i of j) {
-        this.esercenti.push(i);
-      }
-    });
-
-    console.log(this.esercenti);
-
+  //Scrittura del metodo utile alla chiamata asincrona fetch tramite la quale richiamare l'elenco di esercenti
+  async fetchEsercenti() {
+    let risposta = await (await fetch('http://192.168.43.134:9090/potacoin/potacoinbackend/cliente/esercenti/all')).json();
+    console.log(risposta);
+    //Una volta effettuata la chiamata viene ciclato il json ricevuto e quindi aggiunto ogni esercente alla lista
+    for (let i of risposta.esercenti) {
+      console.log(i);
+      this.esercenti.push(i);
+      console.log("Esecente aggiunto alla lista!")
+    }
+    return risposta;
   }
 
   ngOnInit() {
-      this.creaDaJson();
+      this.fetchEsercenti();
   }
 
 }
