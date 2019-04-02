@@ -4,9 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landingpage',
     pathMatch: 'full'
   },
+    { path: 'landingpage',
+        loadChildren: './landingpage/landingpage.module#LandingpagePageModule'
+    },
   {
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
@@ -62,7 +65,8 @@ const routes: Routes = [
   { 
     path: 'inserisciscontrino', 
     loadChildren: './inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' 
-  }
+  },
+
 ];
 
 @NgModule({

@@ -3,26 +3,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
-import { ChartsModule } from 'ng2-charts';
+import {RouterModule, Routes} from '@angular/router';
 import { HomePage } from './home.page';
 
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-      ChartsModule,
-      IonicModule,
-    CustomHeaderModule,
-    RouterModule.forChild([
-      {
+
+const routes: Routes = [
+    {
         path: '',
         component: HomePage
-      }
-    ])
-  ],
-  declarations: [
-    HomePage
-  ]
+    }
+];
+
+@NgModule({
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        CustomHeaderModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [HomePage]
 })
 export class HomePageModule {}
