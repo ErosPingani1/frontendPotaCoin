@@ -1,3 +1,6 @@
+import { HereMapComponentModule } from './here-map/here-map.module';
+import { HereMapComponent } from './here-map/here-map.component';
+import { DettaglioesercentePageModule } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.module';
 import { CustomHeaderModule } from './customheader/customheader.module';
 import { DettaglionewsPage } from './notifiche/dettaglio/dettaglionews/dettaglionews.page';
 import { DettaglioesercentePage } from './elencoesercenti/dettaglio/dettaglioesercente/dettaglioesercente.page';
@@ -28,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    CustomHeaderModule
+    CustomHeaderModule,
+    HereMapComponentModule
   ],
   providers: [
     StatusBar,

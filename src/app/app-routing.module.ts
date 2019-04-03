@@ -7,9 +7,10 @@ const routes: Routes = [
     redirectTo: 'landingpage',
     pathMatch: 'full'
   },
-    { path: 'landingpage',
-        loadChildren: './landingpage/landingpage.module#LandingpagePageModule'
-    },
+  {
+    path: 'landingpage',
+    loadChildren: './landingpage/landingpage.module#LandingpagePageModule'
+  },
   {
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'

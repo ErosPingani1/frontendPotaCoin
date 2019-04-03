@@ -2,7 +2,9 @@
 <ion-content (pandown)="closemodal()" id="corpodettaglio" padding>
   <ion-icon name="arrow-round-back" id="arrow" (click)="closemodal()"></ion-icon>
   <img src='assets/img/mp.jpg' alt="logoesercente">
-  <br>
+  <br/>
   <h1 id="titoloesercente">{{ esercente.nome_attivita }}</h1>
   <h4 id="tipoesercente">{{ esercente.tipo_esercente }}</h4>
+  <br/>
+  <here-map appId="zoHfHSZNp6fW6zXeFNhr" appCode="PKJPamWWb6ASYw4qs2sxGw" lat="37.7397" lng="-121.4252"></here-map>
 </ion-content>

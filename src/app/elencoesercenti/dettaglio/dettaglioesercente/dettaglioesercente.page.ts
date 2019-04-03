@@ -1,5 +1,5 @@
 import { ModalController } from '@ionic/angular';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-dettaglioesercente',
@@ -11,7 +11,8 @@ export class DettaglioesercentePage implements OnInit {
   //Lettura del valore esercente passato tramite props
   @Input() esercente: any;
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController) {
+  }
 
   closemodal() {
     this.modalCtrl.dismiss();
