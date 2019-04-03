@@ -44,6 +44,7 @@ export class HereMapComponent implements OnInit {
     this.router = this.platform.getRoutingService();
   }
 
+  // La mappa deve essere generata nel metodo di AfterViewInit() in quanto visualizzata solo dopo la creazione della view stessa
   public ngAfterViewInit() {
     setTimeout(() => {
       let defaultLayers = this.platform.createDefaultLayers();
@@ -60,7 +61,5 @@ export class HereMapComponent implements OnInit {
       this.map.addObject(marker);
     }, 100);
   }
-
-  public isoline() { }
 
 }

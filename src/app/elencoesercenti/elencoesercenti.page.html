@@ -1,7 +1,7 @@
 <app-customheader></app-customheader>
 
 <ion-content padding>
-  <ion-searchbar placeholder="Cerca..."></ion-searchbar>
+  <ion-searchbar animated mode="ios" placeholder="Cerca..."></ion-searchbar>
   <ion-card *ngFor="let esercente of esercenti" (click)="presentModal(esercente)" class="pointer">
     <img src="" alt="">
     <ion-card-header>
