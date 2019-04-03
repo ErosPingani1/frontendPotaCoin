@@ -1,0 +1,70 @@
+ion-content {
+  --background: url('~src/assets/img/Backgroundimg.jpg');
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  margin-left: 26%;
+  margin-top: 10%;
+}
+
+.titolo{
+  color: #E94E58;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.chicosa{
+  text-align: center;
+  color: blue;
+  font-size: 15px;
+  margin-top: 15%;
+}
+.login{
+  color:#ffffff;
+  font-size: medium;
+  background-color: #E94E58;
+  border-radius: 10px;
+  height: 45px;
+  min-width: 100px;
+  width: 210px;
+  margin-left: 23%;
+  margin-top:10%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+  border-color: transparent;
+}
+.input{
+  background-color: rgba(0, 0, 0, 0);
+  border-style: outset;
+  border-color: rgba(236,236,236,0.35);
+  margin-left:10%;
+  margin-top: 5%;
+  width: 80%;
+  height: 40px;
+
+}
+.google{
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 50px;
+}
+.facebook{
+  margin-left: 5%;
+  margin-top: 5%;
+  width:50px;
+  border-radius: 50%;
+}
+.bottoni {
+  color:#ffffff;
+  font-size: medium;
+  background-color: #E94E58;
+  border-radius: 10px;
+  height: 45px;
+  min-width: 100px;
+  width: 210px;
+  margin-left: 23%;
+  margin-top:5%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+}

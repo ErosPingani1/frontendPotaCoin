@@ -10,7 +10,10 @@ const routes: Routes = [
     { path: 'landingpage',
         loadChildren: './landingpage/landingpage.module#LandingpagePageModule'
     },
-  {
+    { path: 'login',
+        loadChildren: './login/login.module#LoginPageModule'
+    },
+    {
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
@@ -66,6 +69,7 @@ const routes: Routes = [
     path: 'inserisciscontrino', 
     loadChildren: './inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule' 
   },
+
 
 ];
 
