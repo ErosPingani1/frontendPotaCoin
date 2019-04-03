@@ -22,8 +22,7 @@ ion-content {
   font-size: 15px;
   margin-top: 15%;
 }
-
-.bottoni {
+.login{
   color:#ffffff;
   font-size: medium;
   background-color: #E94E58;
@@ -32,8 +31,31 @@ ion-content {
   min-width: 100px;
   width: 210px;
   margin-left: 23%;
-  margin-top:5%;
+  margin-top:10%;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.40);
+  border-color: transparent;
+  outline: none;
+}
+.input{
+  background-color: rgba(0, 0, 0, 0);
+  border-style: outset;
+  border-color: rgba(236,236,236,0.35);
+  margin-left:10%;
+  margin-top: 5%;
+  width: 80%;
+  height: 40px;
+
+}
+.google{
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 50px;
+}
+.facebook{
+  margin-left: 5%;
+  margin-top: 5%;
+  width:50px;
+  border-radius: 50%;
 }
 
 .pointer {
