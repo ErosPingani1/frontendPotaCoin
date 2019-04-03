@@ -1,5 +1,6 @@
 import { Platform } from '@ionic/angular';
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { mapChildrenIntoArray } from '@angular/router/src/url_tree';
 
 //H non è una variabile di Typescript, ma in questo modo stiamo dichiarando a Typescript di ignorare eventuali errori e usare H come globale
 declare var H: any;
@@ -35,25 +36,6 @@ export class HereMapComponent implements OnInit {
 
   constructor() {}
 
-  /*ngOnInit() {}
-
-  ngAfterViewInit() {
-    let platform = new H.service.Platform({
-      "add_id": this.appId,
-      "app_code": this.appCode
-    });
-    let defaultLayers = platform.createDefaultLayers();
-    let map = new H.Map(
-      this.mapElement.nativeElement,
-      defaultLayers.normal.map,
-      {
-        zoom: 10,
-        center: { lat: this.lat, lng: this.lng }
-      }
-    );
-    let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-  }*/
-
   public ngOnInit() {
     this.platform = new H.service.Platform({
       "app_id": this.appId,
@@ -69,11 +51,13 @@ export class HereMapComponent implements OnInit {
         this.mapElement.nativeElement,
         defaultLayers.normal.map,
         {
-          zoom: 10,
+          zoom: 15,
           center: { lat: this.lat, lng: this.lng },
         }
       );
       let behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(this.map))
+      let marker = new H.map.Marker({lat: this.lat, lng: this.lng});
+      this.map.addObject(marker);
     }, 100);
   }
 
