@@ -3,9 +3,9 @@
   <div class="titolo">POTACOIN</div>
 
   <div style="margin-top:50px;">
-    <form (ngSubmit)="doLogin()">
-      <input placeholder="E-mail" type="email" name="email" class="input"><br>
-      <input placeholder="Password" type="password" name="password" class="input"><br>
+    <form #f="ngForm" (ngSubmit)="doLogin(f)">
+      <ion-input placeholder="E-mail" ngModel type="email" name="email" class="input" required></ion-input><br>
+      <ion-input placeholder="Password" ngModel type="password" name="password" class="input" required></ion-input><br>
       <input type="submit" value="Login" class="login">
     </form>
 

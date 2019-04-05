@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SystemJsNgModuleLoader } from '@angular/core';
 import { RouterModule, Router, Route } from '@angular/router';
 import { Platform } from '@ionic/angular';
 import { JsonPipe } from '@angular/common';
@@ -18,7 +18,8 @@ export class LoginPage implements OnInit {
 }
 
 
-async doLogin(){
+async doLogin(form : any){
+  console.log(form.value.email + " " + form.value.password);
   if('c' == this.tipo){
     this.url = this.url + this.urlcliente;
   } else if ('e' == this.tipo){
