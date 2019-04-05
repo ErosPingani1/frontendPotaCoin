@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RouterModule, Router, Route } from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  tipo = null;
 
-  constructor() { }
+  constructor(public platform : Platform) {
+    
+}
 
   ngOnInit() {
+    this.tipo = this.platform.getQueryParam("tipo");
+   console.log(this.tipo);
   }
 
 }
