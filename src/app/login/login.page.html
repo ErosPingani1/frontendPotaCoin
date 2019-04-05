@@ -3,10 +3,10 @@
   <div class="titolo">POTACOIN</div>
 
   <div style="margin-top:50px;">
-    <form action="/action_page.php">
+    <form (ngSubmit)="doLogin()">
       <input placeholder="E-mail" type="email" name="email" class="input"><br>
       <input placeholder="Password" type="password" name="password" class="input"><br>
-      <input type="submit" value="Login" class="login" routerLink="/home">
+      <input type="submit" value="Login" class="login">
     </form>
 
   </div>
