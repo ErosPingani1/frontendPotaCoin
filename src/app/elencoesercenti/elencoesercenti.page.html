@@ -1,14 +1,18 @@
 <app-customheader></app-customheader>
 
 <ion-content padding>
-  <ion-searchbar animated mode="ios" placeholder="Cerca..."></ion-searchbar>
-  <ion-card *ngFor="let esercente of esercenti" (click)="presentModal(esercente)" class="pointer">
-    <img src="" alt="">
-    <ion-card-header>
-      <ion-card-subtitle>{{ esercente.indirizzo }}</ion-card-subtitle>
-      <ion-card-title id="titolo">{{ esercente.nome_attivita }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>{{ esercente.tipo_esercente }}</ion-card-content>
-  </ion-card>
+  <ion-searchbar animated mode="ios" placeholder="Cerca..." (ionInput)="searchEsercente()" (ionClear)="searchClear()" (keydown)="searchCancel($event)" id="searchbar"></ion-searchbar>
+  <p *ngIf="msgvisible === true" id="errormsg">{{ searcherrormsg }}</p>
+  <!-- Serve un ngIf che verifica che un boolean di visualizzazione sia true -->
+  <ng-container *ngFor="let esercente of esercenti">
+    <ion-card *ngIf="esercente.visible" (click)="presentModal(esercente)" class="pointer">
+      <img src="" alt="">
+      <ion-card-header>
+        <ion-card-subtitle>{{ esercente.indirizzo }}</ion-card-subtitle>
+        <ion-card-title id="titolo">{{ esercente.nome_attivita }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ esercente.tipo_esercente }}</ion-card-content>
+    </ion-card>
+  </ng-container>
 
 </ion-content>
