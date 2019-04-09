@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 @Component({
   selector: 'app-landingpage',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingpagePage implements OnInit {
 
-  constructor() { }
+  constructor(public router : Router) {
+  }
+
+  tologin(vtipo: any) {
+    this.router.navigate(['/login'],{ queryParams: {tipo: vtipo}});
+  }
+
 
   ngOnInit() {
   }
