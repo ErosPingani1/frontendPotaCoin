@@ -14,42 +14,59 @@ export class AppComponent {
         {
             title: 'Home',
             url: '/home',
-            icon: 'home'
+            //icon: 'home',
+            src: '',
+            position: ''
         },
         {
             title: 'I Miei Buoni',
             url: '/mieibuoni',
-            icon: 'gift'
+            //icon: 'gift',
+            src: '/assets/img/imieibuoni.svg',
+            position: 'header'
         },
         {
             title: 'Catalogo Premi',
             url: '/catalogopremi',
-            icon: 'star'
-        },
-        {
-            title: 'Notizie',
-            url: '/notifiche',
-            icon: 'notifications'
+            //icon: ''
+            src: '/assets/img/catalogo.svg',
+            position: 'header'
         },
         {
             title: 'Elenco Esercenti',
             url: '/elencoesercenti',
-            icon: 'wine'
+            //icon: 'wine',
+            src: '/assets/img/mappaesercenti.svg',
+            position: 'header'
+        },
+        {
+            title: 'News',
+            url: '/notizie',
+            //icon: 'notifications',
+            src: '/assets/img/news.svg',
+            position: 'header'
+        },
+        {
+            title: 'Notifiche',
+            url: '/notifiche',
+            //icon: '',
+            src: '/assets/img/notifiche.svg',
+            position: 'header'
         },
         {
             title: 'Profilo',
             url: '/mioprofilo',
-            icon: 'contact'
+            //icon: 'contact'
         },
         {
             title: 'Invita un Amico',
             url: '/invitamico',
-            icon: 'people'
+            //icon: 'people'
         },
         {
             title: 'Help',
             url: '/help',
-            icon: 'help-circle-outline'
+            //icon: 'help-circle-outline'
         }
     ];
 

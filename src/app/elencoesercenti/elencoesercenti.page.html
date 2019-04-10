@@ -8,10 +8,10 @@
     <ion-card *ngIf="esercente.visible" (click)="presentModal(esercente)" class="pointer">
       <img src="" alt="">
       <ion-card-header>
-        <ion-card-subtitle>{{ esercente.indirizzo }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ esercente.tipo_esercente }}</ion-card-subtitle>
         <ion-card-title id="titolo">{{ esercente.nome_attivita }}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>{{ esercente.tipo_esercente }}</ion-card-content>
+      <ion-card-content>{{ esercente.indirizzo }}</ion-card-content>
     </ion-card>
   </ng-container>
 

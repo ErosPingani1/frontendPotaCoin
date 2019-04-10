@@ -73,12 +73,17 @@ const routes: Routes = [
     },
     {
         path: 'dettaglionews',
-        loadChildren: './notifiche/dettaglio/dettaglionews/dettaglionews.module#DettaglionewsPageModule'
+        loadChildren: './notizie/dettaglio/dettaglionews/dettaglionews.module#DettaglionewsPageModule'
     },
     {
         path: 'inserisciscontrino',
         loadChildren: './inserisciscontrino/inserisciscontrino.module#InserisciscontrinoPageModule'
+    },
+    { 
+        path: 'notizie', 
+        loadChildren: './notizie/notizie.module#NotiziePageModule' 
     }
+
 
 ];
 

@@ -35,9 +35,9 @@ export class ElencoesercentiPage implements OnInit {
   //Scrittura del metodo utile alla chiamata asincrona fetch tramite la quale richiamare l'elenco di esercenti
   async fetchEsercenti() {
     //Luca
-    //let risposta = await (await fetch('http://10.3.129.135:9090/potacoin/potacoinbackend/cliente/esercenti/all')).json();
+    let risposta = await (await fetch('http://10.3.129.135:9090/potacoin/potacoinbackend/cliente/esercenti/all')).json();
     //Ceru
-    let risposta = await (await fetch('http://192.168.43.134:9090/potacoin/potacoinbackend/cliente/esercenti/all')).json();
+    //let risposta = await (await fetch('http://192.168.43.134:9090/potacoin/potacoinbackend/cliente/esercenti/all')).json();
     console.log(risposta);
     //Una volta effettuata la chiamata viene ciclato il json ricevuto e quindi aggiunto ogni esercente alla lista
     for (let i of risposta.esercenti) { 

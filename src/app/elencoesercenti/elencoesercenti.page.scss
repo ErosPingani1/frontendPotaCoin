@@ -12,9 +12,11 @@ ion-card {
     border: 0.1em solid grey;
     border-radius: 1.5em;
     box-shadow: 0.188em 0.188em 0.938em #575555;
+    text-align: center;
 }
 
 #titolo {
+    text-transform: uppercase;
     color: #E94E58;
     font-weight: bold;
     font-size: 1.5em;
