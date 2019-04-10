@@ -4,9 +4,9 @@
 
   <div style="margin-top:50px;">
     <form #f="ngForm" (ngSubmit)="doLogin(f)">
-      <ion-input placeholder="E-mail" ngModel type="email" name="email" class="input" required></ion-input><br>
-      <ion-input placeholder="Password" ngModel type="password" name="password" class="input" required></ion-input><br>
-      <input type="submit" value="Login" class="login">
+      <input placeholder="E-mail" ngModel type="text" name="username" class="input" required><br>
+      <input placeholder="Password" ngModel type="password" name="password" class="input" required ><br>
+      <button ion-button type="submit" value="Login" class="login" [disabled]="!f.valid">Login</button>
     </form>
 
   </div>

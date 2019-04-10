@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, SystemJsNgModuleLoader } from '@angular/core';
-import { RouterModule, Router, Route } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
 import { Platform } from '@ionic/angular';
-import { JsonPipe } from '@angular/common';
+import {Storage} from '@ionic/storage';
+
 
 @Component({
   selector: 'app-login',
@@ -14,25 +14,36 @@ export class LoginPage implements OnInit {
   urlcliente = 'cliente/login';
   urlesercente = 'esercente/login';
 
-  constructor(public platform : Platform) {
-}
-
-
-async doLogin(form : any){
-  console.log(form.value.email + " " + form.value.password);
-  if('c' == this.tipo){
-    this.url = this.url + this.urlcliente;
-  } else if ('e' == this.tipo){
-    this.url = this.url + this.urlcliente;
+  constructor(private platform: Platform ) {
   }
-    let risposta = await (await fetch(this.url,{
-      headers:{'Accept':'application/json', 'Content-Type':'application/json'},method:'POST', body:'{ "username" : "cliente1", "password" : "1234" }'})).json();
-    console.log(risposta.token);
-  };
+
+
+  async doLogin(form: any) {
+    let body = this.createJson(form);
+    console.log(body);
+    if ('c' == this.tipo) {
+      this.url = this.url + this.urlcliente;
+    } else if ('e' == this.tipo) {
+      this.url = this.url + this.urlcliente;
+    }
+    let risposta = await (await fetch(this.url, {
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:body})).json();
+    console.log(risposta);
+    if(!risposta.token){
+      console.log("hai sbagliato")
+    }else{
+    
+    }
+  }
+  
+;
 
   ngOnInit() {
     this.tipo = this.platform.getQueryParam("tipo");
-   console.log(this.tipo);
+    console.log(this.tipo);
+  }
+  createJson(form: any) {
+    return '{ "username" : "'+form.value.username+'", "password" : "'+form.value.password+'" }';
   }
 
 }
