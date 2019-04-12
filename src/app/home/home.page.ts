@@ -41,9 +41,9 @@ export class HomePage implements OnInit {
 
     async getDataUser() {
       if (true /*controllo token*/){
-        this.body = '{ "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTA2MjM1NzI4NiwidGlwb2xvZ2lhIjoiYyJ9.HDy8wfT2SnTApI6nUJVpxdA6EcZZ1sdEz1M48UFlbPM"}';
+        this.body = '{ "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTA4NzYxNzE0NSwidGlwb2xvZ2lhIjoiYyJ9.z7qRoeoaGifdwzwQu5F7k3wE1Bb2ob8p4mjSWQUlolQ"}';
         let risposta = await (await fetch(this.dataurl, {
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:this.body})).json();
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:this.body})).json();
         console.log(risposta);
 
         if (risposta.errore == null){

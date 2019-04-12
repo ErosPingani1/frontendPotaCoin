@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
       this.url = this.url + this.urlesercente;
     }
     let risposta = await (await fetch(this.url, {
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:body})).json();
+      headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:body})).json();
     console.log(risposta);
     if(!risposta.token){
       console.log("hai sbagliato");
