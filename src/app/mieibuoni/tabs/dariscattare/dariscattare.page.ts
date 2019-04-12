@@ -8,8 +8,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class DariscattarePage implements OnInit {
     vauchers: any = [];
+    private dataurl = 'http://localhost:8080/potacoin/potacoinbackend/cliente/mieibuoni';
+    public body = '';
 
-    constructor(private http: HttpClient) {
+    constructor() {
 
     }
 
@@ -35,29 +37,34 @@ export class DariscattarePage implements OnInit {
     }
 
     ngOnInit() {
-        this.creaDaJson();
+        //this.creaDaJson();
         this.getAllBuoni();
     }
 
-    getAllBuoni() {
-        this.http.get('http://localhost:9090/potacoin/potacoinbackend/buoni/all', {
-            headers:
-                new HttpHeaders(
-                    {
-                        'Content-Type': 'application/json',
-                        'X-Requested-With': 'HttpRequest',
-                        'MyClientCert': '',        // This is empty
-                        'MyToken': ''              // This is empty
-                    }
-                )
-        }).subscribe((response) => {
-            console.log(response);
-        });
+    async getAllBuoni(){
 
-        //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
-
+        if (true /*controllo token*/){
+            this.body = '{  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTA2MjM1NzI4NiwidGlwb2xvZ2lhIjoiYyJ9.HDy8wfT2SnTApI6nUJVpxdA6EcZZ1sdEz1M48UFlbPM" }';
+            let risposta = await (await fetch(this.dataurl, {
+              headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:this.body})).json();
+            console.log(risposta);
+    
+            if (risposta.errore == null){
+              this.vauchers = risposta.mieibuoni;
+            
+              console.log("Benvenuto " + this.vauchers); 
+    
+    
+            } else if (risposta.errore.id == 2){
+              console.log("DB exception, implementare toast!");
+            }else if(  risposta.errore.id == 1){
+              console.log("Come sei finito qua brutto cane??");
+          }
 
     }
+
+    }
+
 }
 
 export class Vaucher {
