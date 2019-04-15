@@ -3,22 +3,22 @@
   <div class="titolo">POTACOIN</div>
 
   <div style="margin-top:20px;">
-    <form action="/action_page.php">
-      <input placeholder="Nome attività" type="text" name="attivita" class="input"><br>
-      <input list="attivita" placeholder="Seleziona Tipologia" name="tipologia" class="input">
-      <datalist id="attivita">
+    <form #f="ngForm" (ngSubmit)="doSignup(f)">
+      <input placeholder="Nome attività" ngModel type="text" name="attivita" class="input"><br>
+      <input list="attivita" ngModel placeholder="Seleziona Tipologia" name="tipologia" class="input">
+      <datalist id="attivita" ngModel>
         <option value="Gelateria">
         <option value="Piadineria">
         <option value="Sala da the">
         <option value="Pizzeria">
         <option value="Altro">
       </datalist><br>
-      <input placeholder="Partita IVA" type="text" name="piva" class="input"><br>
-      <input placeholder="Username" type="text" name="username" class="input"><br>
-      <input placeholder="E-mail" type="email" name="email" class="input"><br>
-      <input placeholder="Password" type="password" name="password" class="input"><br>
-      <input placeholder="Conferma password" type="password" name="confermapsw" class="input"><br>
-      <input type="submit" value="Registrati" class="registrati">
+      <input placeholder="Partita IVA" ngModel type="text" name="piva" class="input"><br>
+      <input placeholder="Username" ngModel type="text" name="username" class="input"><br>
+      <input placeholder="E-mail" ngModel type="email" name="email" class="input"><br>
+      <input placeholder="Password" ngModel type="password" name="password" class="input"><br>
+      <input placeholder="Conferma password" ngModel type="password" name="confermapsw" class="input"><br>
+      <input type="submit" ngModel value="Registrati" class="registrati">
     </form>
 
   </div>

@@ -59,7 +59,16 @@ export class LoginPage implements OnInit {
     console.log(this.tipo);
   }
   createJson(form: any) {
-    return '{ "username" : "'+form.value.username+'", "password" : "'+SHA256(form.value.password).toString()+'" }';
+    return JSON.stringify(new Credenziali(form.value.username, form.value.password));
   }
 
+};
+
+class Credenziali {
+  username : string;
+  password : string;
+constructor (username : string, password : string ){
+  this.username = username;
+  this.password = SHA256(password).toString();
+}
 }
