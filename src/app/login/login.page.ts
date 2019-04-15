@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { Platform, ToastController } from '@ionic/angular';
-import {Storage} from '@ionic/storage';
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,9 +32,13 @@ export class LoginPage implements OnInit {
       console.log("hai sbagliato");
       this.presentToast()
     }else{
+      this.saveToken(risposta.token);
       this.router.navigate(['/home']);
     }
   };
+  saveToken(token: any) {
+    
+  }
 
   async presentToast() {
     const toast = await this.toastController.create({
