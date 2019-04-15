@@ -2,6 +2,7 @@ import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
+import {SHA256} from 'crypto-js';
 
 @Component({
   selector: 'app-home',
@@ -41,7 +42,7 @@ export class HomePage implements OnInit {
 
     async getDataUser() {
       if (true /*controllo token*/){
-        this.body = '{ "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTA4NzYxNzE0NSwidGlwb2xvZ2lhIjoiYyJ9.z7qRoeoaGifdwzwQu5F7k3wE1Bb2ob8p4mjSWQUlolQ"}';
+        this.body = '{ "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTM0MDQ3NTA5OCwidGlwb2xvZ2lhIjoiYyJ9.QyzNh85s8TB0ffu98Ez67cpSc2VSmP3F7wTZjbnUkzA"}';
         let risposta = await (await fetch(this.dataurl, {
           headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:this.body})).json();
         console.log(risposta);

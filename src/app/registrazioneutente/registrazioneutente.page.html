@@ -3,14 +3,15 @@
   <div class="titolo">POTACOIN</div>
 
   <div style="margin-top:20px;">
-    <form action="/action_page.php">
-      <input placeholder="Nome" type="text" name="nome" class="input"><br>
-      <input placeholder="Cognome" type="text" name="cognome" class="input"><br>
-      <input placeholder="Codice Fiscale" type="text" name="cf" class="input"><br>
-      <input placeholder="Username" type="text" name="username" class="input"><br>
-      <input placeholder="E-mail" type="email" name="email" class="input"><br>
-      <input placeholder="Password" type="password" name="password" class="input"><br>
-      <input placeholder="Conferma password" type="password" name="confermapsw" class="input"><br>
+    <form #f="ngForm" (ngSubmit)="doSignup(f)">
+      <input placeholder="Nome" ngModel type="text" name="nome" class="input"><br>
+      <input placeholder="Cognome" ngModel type="text" name="cognome" class="input"><br>
+      <input placeholder="Codice Fiscale" ngModel type="text" name="cf" class="input"><br>
+      <input placeholder="Username" ngModel type="text" name="username" class="input"><br>
+      <input placeholder="Città" ngModel type="text" name="citta" class="input"><br>
+      <input placeholder="E-mail" ngModel type="email" name="email" class="input"><br>
+      <input placeholder="Password" ngModel type="password" name="password" class="input"><br>
+      <input placeholder="Conferma password" ngModel type="password" name="confermapsw" class="input"><br>
       <input type="submit" value="Registrati" class="registrati">
     </form>
 

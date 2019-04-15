@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Platform, ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
-
+import {SHA256} from 'crypto-js';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
     console.log(this.tipo);
   }
   createJson(form: any) {
-    return '{ "username" : "'+form.value.username+'", "password" : "'+form.value.password+'" }';
+    return '{ "username" : "'+form.value.username+'", "password" : "'+SHA256(form.value.password).toString()+'" }';
   }
 
 }
