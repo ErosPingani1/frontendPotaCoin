@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wishlist.page.scss'],
 })
 export class WishlistPage implements OnInit {
-  urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buonipreferiti";
+  urlCeru = "http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/buonipreferiti";
   buonipreferiti : Vaucher[] = [];
   token : string;
   constructor() { }

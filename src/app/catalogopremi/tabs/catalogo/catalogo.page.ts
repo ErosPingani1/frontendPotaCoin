@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CatalogoPage implements OnInit {
     vauchers : Vaucher[] = [];
-    urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buoni/all";
+    urlCeru = "http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/buoni/all";
 
     constructor() {
 

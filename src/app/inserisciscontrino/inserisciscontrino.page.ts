@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inserisciscontrino.page.scss'],
 })
 export class InserisciscontrinoPage implements OnInit {
-  urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/riscuotiscontrino";
+  urlCeru = "http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/riscuotiscontrino";
   token :string;
 
   ngOnInit() {

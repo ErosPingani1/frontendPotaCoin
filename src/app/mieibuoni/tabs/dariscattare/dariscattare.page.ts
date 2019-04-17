@@ -8,7 +8,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class DariscattarePage implements OnInit {
     vauchers: any = [];
-    private urlCeru = 'http://localhost:8080/potacoin/potacoinbackend/cliente/mieibuoni';
+    private urlCeru = 'http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/mieibuoni';
     private token;
 
     constructor() {
