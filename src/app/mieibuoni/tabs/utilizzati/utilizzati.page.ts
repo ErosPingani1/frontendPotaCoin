@@ -9,6 +9,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class UtilizzatiPage implements OnInit {
     token : string;
     vauchers: any = [];
+
     urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/bouniriscattati";
 
     constructor() {

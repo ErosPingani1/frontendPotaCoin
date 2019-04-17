@@ -1,0 +1,13 @@
+<ion-content>
+  <img class="logo" src="../../assets/img/logoPotacoin.png" width=50 alt="logo">
+  <div class="titolo">Controlla Buono</div>
+
+  <div style="margin-top:20px;">
+    <form #f="ngForm" (ngSubmit)="riscuotiBuono(f)">
+      <input placeholder="ID buono" ngModel type="number" name="idbuono" class="input"><br>
+      <input placeholder="ID cliente" ngModel type="number" name="idcliente" class="input"><br>
+      <ion-button type="submit" class="riscuoti" color="danger">Riscuoti</ion-button>
+    </form>
+  </div>
+
+</ion-content>

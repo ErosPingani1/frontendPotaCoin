@@ -8,7 +8,7 @@ import { DettagliobuonoPage } from './dettagliobuono/dettagliobuono.page';
 })
 export class CatalogoPage implements OnInit {
     vauchers : Vaucher[] = [];
-    urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buoni/all";
+    urlCeru = "http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/buoni/all";
 
     constructor(public modalController: ModalController) {
 

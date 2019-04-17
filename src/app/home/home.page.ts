@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
         [0],
     ];
     public doughnutChartType: ChartType = 'doughnut';
-    private dataurl = 'http://localhost:8080/potacoin/potacoinbackend/cliente/dati';
+    private dataurl = 'http://10.3.133.123:8080/potacoin/potacoinbackend/cliente/dati';
     private nomeutente;
     private punti: any;
     private token : string;

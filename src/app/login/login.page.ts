@@ -9,7 +9,7 @@ import {SHA256} from 'crypto-js';
 })
 export class LoginPage implements OnInit {
   tipo = null;
-  url = 'http://localhost:8080/potacoin/potacoinbackend/';
+  url = 'http://10.3.133.123:8080/potacoin/potacoinbackend/';
   urlcliente = 'cliente/login';
   urlesercente = 'esercente/login';
 
@@ -29,7 +29,12 @@ export class LoginPage implements OnInit {
       this.presentToast()
     }else{
       this.saveToken(risposta.token);
-      this.router.navigate(['/home']);
+      if (this.tipo == 'c') {
+        this.router.navigate(['/home']);
+      } else if (this.tipo == 'e') {
+        this.router.navigate(['/riscossionebuono']);
+      }
+      
     }
   };
   saveToken(token: any) {
