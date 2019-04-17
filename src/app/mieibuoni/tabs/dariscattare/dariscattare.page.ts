@@ -18,14 +18,12 @@ export class DariscattarePage implements OnInit {
 
 
     ngOnInit() {
-        this.token = this.getToken()
+        this.token = localStorage.getItem('token');
         this.getBuoniDaRiscattare();
     }
    
 
     async getBuoniDaRiscattare(){
-
-        if (true /*controllo token*/){
             let body = this.createBody();
             let risposta = await (await fetch(this.urlCeru, {
               headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:body})).json();
@@ -42,16 +40,9 @@ export class DariscattarePage implements OnInit {
             }else if(  risposta.errore.id == 1){
               console.log("Come sei finito qua??");
           }
-
-    }
-
     }
     private createBody(): string {
         return  JSON.stringify(new Request(this.token));
-    }
-
-    private getToken(): string {
-        return '';
     }
 
 }

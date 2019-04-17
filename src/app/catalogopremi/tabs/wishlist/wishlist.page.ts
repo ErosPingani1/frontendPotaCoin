@@ -8,22 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class WishlistPage implements OnInit {
   urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buonipreferiti";
   buonipreferiti : Vaucher[] = [];
+  token : string;
   constructor() { }
 
   ngOnInit() {
+    this.token = localStorage.getItem('token');
     this. getBuoniPreferiti();   
 }
 
 async getBuoniPreferiti() {
-  let body = this.createBody();
+  let body = this.getBody();
     let risposta = await (await fetch(this.urlCeru, {
         headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'POST',body:body})).json();
       console.log(risposta);
       this.buonipreferiti = risposta.buoni;
 }
-  createBody(): string {
-    return ;
-  }
+private getBody() {
+  return JSON.stringify((new Request(this.token)));
+}
 
 }
 

@@ -2,7 +2,6 @@ import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
-import {SHA256} from 'crypto-js';
 
 @Component({
   selector: 'app-home',
@@ -21,13 +20,14 @@ export class HomePage implements OnInit {
     ];
     public doughnutChartType: ChartType = 'doughnut';
     private dataurl = 'http://localhost:8080/potacoin/potacoinbackend/cliente/dati';
-    public body = '';
     private nomeutente;
     private punti: any;
+    private token : string;
 
   constructor(public navController: NavController) { }
 
   ngOnInit() {
+    this.token = localStorage.getItem('token');
     this.getDataUser();
   }
 
@@ -42,9 +42,9 @@ export class HomePage implements OnInit {
 
     async getDataUser() {
       if (true /*controllo token*/){
-        this.body = '{ "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTM0MDQ3NTA5OCwidGlwb2xvZ2lhIjoiYyJ9.QyzNh85s8TB0ffu98Ez67cpSc2VSmP3F7wTZjbnUkzA"}';
+       let body = this.getBody();
         let risposta = await (await fetch(this.dataurl, {
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:this.body})).json();
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:body})).json();
         console.log(risposta);
 
         if (risposta.errore == null){
@@ -58,5 +58,15 @@ export class HomePage implements OnInit {
           console.log("Come sei finito qua brutto cane??");
       };
       }
+  }
+  private getBody() {
+    return JSON.stringify((new Request(this.token)));
+  }
+}
+class Request{
+  token : string;
+
+  constructor(token : string){
+    this.token = token;
   }
 }

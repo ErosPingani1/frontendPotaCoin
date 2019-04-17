@@ -33,7 +33,7 @@ export class LoginPage implements OnInit {
     }
   };
   saveToken(token: any) {
-    
+    localStorage.setItem('token', token);
   }
 
   async presentToast() {

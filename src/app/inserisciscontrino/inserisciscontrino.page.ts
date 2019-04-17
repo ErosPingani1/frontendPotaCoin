@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InserisciscontrinoPage implements OnInit {
   urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/riscuotiscontrino";
+  token :string;
 
   ngOnInit() {
-   
+    this.token = localStorage.getItem('token');
   }
 
   constructor() { }
@@ -31,7 +32,7 @@ export class InserisciscontrinoPage implements OnInit {
     }
   }
   createJson(form: any) {
-    return JSON.stringify(new RequestScontrino("token", new Scontrino(form.value.codice_scontrino)));
+    return JSON.stringify(new RequestScontrino(this.token, new Scontrino(form.value.codice_scontrino)));
   };
 
 };
@@ -56,5 +57,6 @@ class Scontrino {
   }
 
 }
+
 
 
