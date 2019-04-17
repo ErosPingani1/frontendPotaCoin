@@ -1,67 +1,28 @@
 import {Component, OnInit} from '@angular/core';
-
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-
-
 @Component({
     selector: 'app-catalogo',
     templateUrl: './catalogo.page.html',
     styleUrls: ['./catalogo.page.scss'],
 })
 export class CatalogoPage implements OnInit {
-    vauchers: any = [];
+    vauchers : Vaucher[] = [];
+    urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buoni/all";
 
-    constructor(private http: HttpClient) {
-
-    }
-
-    creaDaJson() {
-
-        //Creazione di lista di vaucher vuota
-    console.log("prova")
-
-        //ForEach che salva il valore del json nella lista
-        fetch('assets/json/PremiMockati.json')
-            .then(r => r.json())
-            .then(j => {
-                console.log(j);
-                console.log(j);
-                for (let i of j) {
-                    this.vauchers.push(i);
-
-                }
-            });
-
-        console.log(this.vauchers);
+    constructor() {
 
     }
-
-
 
 
     ngOnInit() {
-        this.creaDaJson();
-        this.getAllBuoni();
+        this. getAllBuoni();   
     }
 
 
-    getAllBuoni() {
-        this.http.get('http://192.168.43.134:9090/potacoin/potacoinbackend/buoni/all', {
-            headers:
-                new HttpHeaders(
-                    {
-                        'Content-Type': 'application/json',
-                        'X-Requested-With': 'HttpRequest',
-                        'MyClientCert': '',        // This is empty
-                        'MyToken': ''              // This is empty
-                    }
-                )
-        }).subscribe((response) => {
-            console.log(response);
-        });
-
-        //Creazione della classe Esercente in modo da poter creare degli oggetti esercenti nel component
-
+    async getAllBuoni() {
+        let risposta = await (await fetch(this.urlCeru, {
+            headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'GET'})).json();
+          console.log(risposta);
+          this.vauchers = risposta.buoni;
     }
 }
 

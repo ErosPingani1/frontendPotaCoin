@@ -8,45 +8,27 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class DariscattarePage implements OnInit {
     vauchers: any = [];
-    private dataurl = 'http://localhost:8080/potacoin/potacoinbackend/cliente/mieibuoni';
-    public body = '';
+    private urlCeru = 'http://localhost:8080/potacoin/potacoinbackend/cliente/mieibuoni';
+    private token;
 
     constructor() {
 
     }
 
-    creaDaJson() {
 
-        // Creazione di lista di vaucher vuota
-        console.log('prova');
-
-        // ForEach che salva il valore del json nella lista
-        fetch('assets/json/PremiMockati.json')
-            .then(r => r.json())
-            .then(j => {
-                console.log(j);
-                console.log(j);
-                for (let i of j) {
-                    this.vauchers.push(i);
-
-                }
-            });
-
-        console.log(this.vauchers);
-
-    }
 
     ngOnInit() {
-        //this.creaDaJson();
-        this.getAllBuoni();
+        this.token = this.getToken()
+        this.getBuoniDaRiscattare();
     }
+   
 
-    async getAllBuoni(){
+    async getBuoniDaRiscattare(){
 
         if (true /*controllo token*/){
-            this.body = '{  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwidGltZSI6MTU1NTA2MjM1NzI4NiwidGlwb2xvZ2lhIjoiYyJ9.HDy8wfT2SnTApI6nUJVpxdA6EcZZ1sdEz1M48UFlbPM" }';
-            let risposta = await (await fetch(this.dataurl, {
-              headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:this.body})).json();
+            let body = this.createBody();
+            let risposta = await (await fetch(this.urlCeru, {
+              headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, method: 'POST', body:body})).json();
             console.log(risposta);
     
             if (risposta.errore == null){
@@ -58,11 +40,18 @@ export class DariscattarePage implements OnInit {
             } else if (risposta.errore.id == 2){
               console.log("DB exception, implementare toast!");
             }else if(  risposta.errore.id == 1){
-              console.log("Come sei finito qua brutto cane??");
+              console.log("Come sei finito qua??");
           }
 
     }
 
+    }
+    private createBody(): string {
+        return  JSON.stringify(new Request(this.token));
+    }
+
+    private getToken(): string {
+        return '';
     }
 
 }
@@ -81,5 +70,14 @@ export class Vaucher {
         this.scadenza_assoluta = scadenza_assoluta;
         this.scadenza = scadenza;
         this.esercente = esercente;
+    }
+}
+
+class Request {
+    token : string;
+
+    constructor(token: string)
+    {
+        this.token = token;
     }
 }

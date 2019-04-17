@@ -7,11 +7,11 @@
     Pagina iniziale
   </ion-button>
 
-  <div id="form_scontrino">
+  <form #f="ngForm" (ngSubmit)="inviaScontrino(f)">
     <p>Inserisci il codice che trovi sullo scontrino:</p>
-    <ion-input clearInput type="text" placeholder="Inserisci codice" required="True" class="inputscontrino"></ion-input>
+    <input name="codicescontrino" clearInput ngModel type="text" placeholder="Inserisci codice" required="True" class="inputscontrino"/>
     <br />
     <ion-button type="submit" color="danger" class="buttonscontrino">Conferma</ion-button>
-  </div>
+  </form>
 
 </ion-content>

@@ -10,6 +10,8 @@ export class CatalogopremiPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
+  
 
 }

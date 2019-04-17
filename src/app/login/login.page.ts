@@ -20,11 +20,7 @@ export class LoginPage implements OnInit {
   async doLogin(form: any) {
     let body = this.createJson(form);
     console.log(body);
-    if ('c' == this.tipo) {
-      this.url = this.url + this.urlcliente;
-    } else if ('e' == this.tipo) {
-      this.url = this.url + this.urlesercente;
-    }
+  
     let risposta = await (await fetch(this.url, {
       headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:body})).json();
     console.log(risposta);
@@ -56,6 +52,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.tipo = this.platform.getQueryParam("tipo");
+    if ('c' == this.tipo) {
+      this.url = this.url + this.urlcliente;
+    } else if ('e' == this.tipo) {
+      this.url = this.url + this.urlesercente;
+    }
     console.log(this.tipo);
   }
   createJson(form: any) {
