@@ -5,3 +5,18 @@
 usare
   buonipreferiti come array
 -->
+<div class="vaucher-container">
+  <ion-grid class="grid">
+      <ion-row>
+          <ion-col class="col-grid" size="6" size-lg="3" *ngFor="let vaucher of buonipreferiti">
+              <ion-card class="vaucher pointer">
+                  <ion-card-header>
+                      <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
+                      <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
+                  </ion-card-header>
+                  <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
+              </ion-card>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</div>

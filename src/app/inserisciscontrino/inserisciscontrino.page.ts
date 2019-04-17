@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inserisciscontrino',
@@ -13,7 +14,7 @@ export class InserisciscontrinoPage implements OnInit {
     this.token = localStorage.getItem('token');
   }
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   async inviaScontrino(form : any) {
     console.log(form.value.codicescontrino);
@@ -24,15 +25,17 @@ export class InserisciscontrinoPage implements OnInit {
     let risposta = await (await fetch(this.urlCeru, {
       headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:body})).json();
     console.log(risposta);
-    if(!risposta.token){
+    if(risposta.errore){
       console.log("hai sbagliato");
      
     }else{
-
+      this.router.navigate(['/home']);
     }
   }
   createJson(form: any) {
-    return JSON.stringify(new RequestScontrino(this.token, new Scontrino(form.value.codice_scontrino)));
+    console.log(form.value.codice_scontrino);
+    let scontrino = new Scontrino(form.value.codice_scontrino)
+    return JSON.stringify(new RequestScontrino(this.token,scontrino));
   };
 
 };

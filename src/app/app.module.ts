@@ -16,15 +16,18 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DettagliobuonoPage } from './catalogopremi/tabs/catalogo/dettagliobuono/dettagliobuono.page';
 @NgModule({
   declarations: [
     AppComponent,
     DettaglioesercentePage,
-    DettaglionewsPage
+    DettaglionewsPage,
+    DettagliobuonoPage
   ],
   entryComponents: [
     DettaglioesercentePage,
-    DettaglionewsPage
+    DettaglionewsPage,
+    DettagliobuonoPage
   ],
   imports: [
     BrowserModule,

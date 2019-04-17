@@ -1,0 +1,15 @@
+<!-- Per utilizzare gli swipe / pan è stato necessario installare ed importare hammerjs -->
+<ion-content (pandown)="closemodal()" id="corpodettaglio" padding>
+
+  <ion-icon name="arrow-round-back" id="arrow" (click)="closemodal()"></ion-icon>
+<!--mockimmagine-->
+
+<img src="./assets/img/lamarianna.png"/>
+  <h1>{{buonotobuy.nome_attivita}}</h1>
+  <h2>{{buonotobuy.descrizione}}</h2>
+
+  <h3>tipologia: {{buonotobuy.tipo_buono}}</h3>
+
+  <ion-button (click)="acquistaBuono()">Acquista</ion-button>
+  
+</ion-content>

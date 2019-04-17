@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { DettagliobuonoPage } from './dettagliobuono/dettagliobuono.page';
 @Component({
     selector: 'app-catalogo',
     templateUrl: './catalogo.page.html',
@@ -8,7 +10,7 @@ export class CatalogoPage implements OnInit {
     vauchers : Vaucher[] = [];
     urlCeru = "http://localhost:8080/potacoin/potacoinbackend/cliente/buoni/all";
 
-    constructor() {
+    constructor(public modalController: ModalController) {
 
     }
 
@@ -23,6 +25,17 @@ export class CatalogoPage implements OnInit {
             headers: { 'Accept':'application/json', 'Content-Type': 'application/json'}, method: 'GET'})).json();
           console.log(risposta);
           this.vauchers = risposta.buoni;
+    }
+
+
+    async showDetailModal(buono: Vaucher){
+      
+    const modal = await this.modalController.create({
+        component : DettagliobuonoPage,
+      componentProps: { 'buonotobuy': buono },
+      cssClass: 'customModal'
+    });
+    return await modal.present();
     }
 }
 
@@ -41,6 +54,5 @@ export class Vaucher {
         this.scadenza = scadenza;
         this.esercente = esercente;
     }
-
 
 }

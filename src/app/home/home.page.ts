@@ -40,8 +40,12 @@ export class HomePage implements OnInit {
         console.log(event, active);
     }
 
+    ionViewWillEnter(){
+      this.getDataUser();
+    }
+
     async getDataUser() {
-      if (true /*controllo token*/){
+
        let body = this.getBody();
         let risposta = await (await fetch(this.dataurl, {
           headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'}, method: 'POST', body:body})).json();
@@ -57,7 +61,7 @@ export class HomePage implements OnInit {
         }else if(  risposta.errore.id == 1){
           console.log("Come sei finito qua brutto cane??");
       };
-      }
+
   }
   private getBody() {
     return JSON.stringify((new Request(this.token)));

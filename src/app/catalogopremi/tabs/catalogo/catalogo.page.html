@@ -14,12 +14,12 @@
         <ion-grid class="grid">
             <ion-row>
                 <ion-col class="col-grid" size="6" size-lg="3" *ngFor="let vaucher of vauchers">
-                    <ion-card class="vaucher pointer">
-                        <ion-card-header>
-                            <ion-card-title>{{ vaucher.tipo_buono }}</ion-card-title>
-                            <ion-card-subtitle>{{ vaucher.indirizzo }}</ion-card-subtitle>
-                        </ion-card-header>
-                        <ion-card-content>{{ vaucher.scadenza }}</ion-card-content>
+                    <ion-card class="vaucher pointer" (click)="showDetailModal(vaucher)">
+                        <img src="./assets/img/lamarianna.png"/>
+                        <ion-card-content>
+                                <h3>{{ vaucher.descrizione }}</h3>
+                           <p> Costo: {{ vaucher.costo_punti }} PTC</p>
+                        </ion-card-content>
                     </ion-card>
                 </ion-col>
             </ion-row>
