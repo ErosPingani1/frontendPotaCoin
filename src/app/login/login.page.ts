@@ -29,7 +29,12 @@ export class LoginPage implements OnInit {
       this.presentToast()
     }else{
       this.saveToken(risposta.token);
-      this.router.navigate(['/home']);
+      if (this.tipo == 'c') {
+        this.router.navigate(['/home']);
+      } else if (this.tipo == 'e') {
+        this.router.navigate(['/riscossionebuono']);
+      }
+      
     }
   };
   saveToken(token: any) {

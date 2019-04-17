@@ -82,8 +82,11 @@ const routes: Routes = [
     { 
         path: 'notizie', 
         loadChildren: './notizie/notizie.module#NotiziePageModule' 
+    },
+    { 
+        path: 'riscossionebuono', 
+        loadChildren: './riscossionebuono/riscossionebuono.module#RiscossionebuonoPageModule' 
     }
-
 
 ];
 
